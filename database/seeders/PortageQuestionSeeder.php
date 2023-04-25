@@ -435,6 +435,7 @@ class PortageQuestionSeeder extends Seeder
             'ques_mark' => 1,
 
         ]) ;
+        ///////////////////////////////////////////////
         //////////////البعد الاتصالي //////
         PortageQuestion::create([
             'ques_number' => 1,
@@ -743,6 +744,98 @@ class PortageQuestionSeeder extends Seeder
             'box_id' => 23,
             'question' =>'هل يقول الطفل النشيد الوطني كاملا أو أشياء مثله غير الأغاني ؟دعاء أذان أو قصيدة مؤلفة من 25 كلمة على الأثل؟' ,
             'title' => ' تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        //////Box 24
+        PortageQuestion::create([
+            'ques_number' => 30,
+            'box_id' => 24,
+            'question' => 'هل يقرأ الطفل قصة بسيطة بحيث يتابعها من يسمعها بشكل جيد؟' ,
+            'title' => ' تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 31,
+            'box_id' => 24,
+            'question' => 'هل يروي الطفل في خمس دقائق ملخص مسرحية، قصة أو تمثيلية تلفزيونية؟ ليس مجرد الأحداث المثيرة فيها فقط(أداة رقم 11)' ,
+            'title' => ' تطبيق مباشر - سؤال الأم' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 32,
+            'box_id' => 24,
+            'question' => 'هل يفهم الطفل 3 من الإشارات غير اللفظية الأربع التالية:
+            - هز الكتفين بمعنى لا أعرف أو لست متأكد
+            - مد اليد لإيقاف سيارة تكسي
+            - رفع الإبهام إشارة 100%
+            - الغمز بالعين كتحية ودية أو إشارة أنه يمزح' ,
+            'title' => ' تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        ////Box 25
+        PortageQuestion::create([
+            'ques_number' => 33,
+            'box_id' => 25,
+            'question' => 'هل يذكر الطفل كلمتين على الأقل على نفس الوزن مثل: رأس - فأس، حطة - بطة ، بصل - بطل؟' ,
+            'title' => ' تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 34,
+            'box_id' => 25,
+            'question' => 'هل يغني الطفل أغاني أو بيوت مشهورة من أغاني شعبية؟ لا تحتسب أغاني الأطفال والأعياد ' ,
+            'title' => ' تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        /////Box 26
+        PortageQuestion::create([
+            'ques_number' => 35,
+            'box_id' => 26,
+            'question' => 'هل سمع الطفل برنامج راديو وفهمه لمدة 10 دقائق على الأقل(رياضة ، أخبار ، دراما،وليس موسيقى)' ,
+            'title' => ' تطبيق مباشر - سؤال الأم' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        PortageQuestion::create([
+            'ques_number' => 36,
+            'box_id' => 26,
+            'question' => 'هل كتب الطفل رسالة وبعثها دون مساعدة ؟ المساعدة ممكن أن تسمح في العنوان أو التهجية وليس الرسالة نفسها.' ,
+            'title' => ' تطبيق مباشر - سؤال الأم' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        PortageQuestion::create([
+            'ques_number' => 37,
+            'box_id' => 26,
+            'question' => 'هل شارك الطفل في الألعاب الكلامية(مثل: سلطة ملطة تبلناها كلشي فيها إلا ... مافيها)' ,
+            'title' => 'تطبيق مباشر ' ,
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
             ////////update
             'ques_mark' => 1,

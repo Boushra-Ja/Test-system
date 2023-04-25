@@ -22,5 +22,9 @@ class PortageDiminssionSeeder extends Seeder
             'title' => 'بعد العناية الذاتية' ,
 
         ]);
+        PortageDiminssion::create([
+            'title' => 'البعد الاتصالي' ,
+
+        ]);
     }
 }

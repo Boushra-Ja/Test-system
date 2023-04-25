@@ -842,5 +842,105 @@ class PortageQuestionSeeder extends Seeder
 
         ]) ;
 
+        ////////////البعد الحركي//////////////
+        /////Box 27
+        PortageQuestion::create([
+            'ques_number' => 1,
+            'box_id' => 27,
+            'question' => 'هل يرفع الطفل رأسه إلى أعلى بدون دعم لمدة دقيقة على الأقل عندما يكون ملقيا على بطنه؟(أداة رقم 0)' ,
+            'title' => 'تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 2,
+            'box_id' => 27,
+            'question' => 'هل يتدحرج الطفل على بطنه إلى ظهره أو بالعكس دون مساعدة؟' ,
+            'title' => 'سؤال الأم - تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        PortageQuestion::create([
+            'ques_number' => 3,
+            'box_id' => 27,
+            'question' => 'هل ينتقل الطفل من مكان إلى آخر بأي طريقة ؟ زاحفا وبطنه على الأرض أو حبوا وبطنه مرتفعا عن الأرض(بأي طريقة عدا الدحرجة)؟' ,
+            'title' => 'ملاحظة مباشرة - سؤال الأم' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        ///////Box 28
+        PortageQuestion::create([
+            'ques_number' => 4,
+            'box_id' => 28,
+            'question' => 'هل يلتقط الطفل الأشياء المقدمة له بأصبع الإبهام مع إصبع آخر أو أصبعين(هكذا ينجح) أو هل يلتقط الشيء بكل يده(وبهذه الطريقة يفشل)؟(أداة رقم 11)' ,
+            'title' => 'تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 5,
+            'box_id' => 28,
+            'question' => 'هل ينتقل الطفل من وضع الزحف إلى الجلوس أو الوقوف؟ قد يستعين بالأثاث ولكن ليس شخص' ,
+            'title' => 'سؤال الأم - تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 6,
+            'box_id' => 28,
+            'question' => 'هل توقف الطفل عن سيلان اللعاب؟ ويكون قد نجح في هذا البند إن كان ذلك بسبب التسنين أو أثناء الأكل.' ,
+            'title' => 'سؤال الأم - تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+        ///////Box 29
+        PortageQuestion::create([
+            'ques_number' => 7,
+            'box_id' => 29,
+            'question' => 'هل يمشي الطفل جيدا بدون مساعدة داخل المنزل وبدون أن يراقبه أحد بحيث لا يقع أو يتعثر بالأشياء؟' ,
+            'title' => 'ملاحظة مباشرة - سؤال الأم' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 8,
+            'box_id' => 29,
+            'question' => 'هل يصعد الطفل السلم(واقفا وليس زاحفا) مستندا على الحائط أو الدرابزين أو ممسكا بيد شخص لمساعدته؟ واضعا كلتا القدمين على كل درجة وبهذه الطريقة يكون قد نجح.' ,
+            'title' => 'سؤال الأم - تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 9,
+            'box_id' => 29,
+            'question' => 'هل يفك الطفل غطاء الورق عن قطعة الحلوى أو قطعة اللبان(العلكة) أو أي شيء ملفوف بورق؟(أداة رقم 11)' ,
+            'title' => 'تطبيق مباشر ' ,
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            ////////update
+            'ques_mark' => 1,
+
+        ]) ;
+
+
+
     }
 }

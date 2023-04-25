@@ -11,6 +11,8 @@ class BoxSeeder extends Seeder
 
     public function run(): void
     {
+
+        ////Box for Self_care Diminssion
         Box::create([
             'start_age' => 1,
             'end_age' => 6,
@@ -121,6 +123,8 @@ class BoxSeeder extends Seeder
             'dim_id' => PortageDiminssion::where('title', 'بعد العناية الذاتية')->value('id')
 
         ]);
+
+        ////Box for Communication Diminssion
         ///////////////////////////
         Box::create([
             'start_age' => 1,
@@ -231,7 +235,31 @@ class BoxSeeder extends Seeder
 
         ]);
 
+        ////Box for motor Diminssion
+        Box::create([
+            'start_age' => 1,
+            'end_age' => 6,
+            'mark_age' => 1,
+            'id' => 27,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الحركي')->value('id')
 
+        ]);
+        Box::create([
+            'start_age' => 6,
+            'end_age' => 12,
+            'mark_age' => 1,
+            'id' => 28,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الحركي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 12,
+            'end_age' => 16,
+            'mark_age' => 1,
+            'id' => 29,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الحركي')->value('id')
+
+        ]);
 
     }
 }

@@ -3,17 +3,22 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\PortageDiminssion;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
+
     public function run(): void
     {
         $this->call([
-            DifficultTitleSeeder::class
+            DifficultTitleSeeder::class ,
+            PortageDiminssionSeeder::class,
+            BoxSeeder::class ,
+            PortageQuestionSeeder::class
         ]);
+
+
     }
 }

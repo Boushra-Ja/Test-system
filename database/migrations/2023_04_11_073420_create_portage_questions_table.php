@@ -12,6 +12,8 @@ return new class extends Migration
         Schema::create('portage_questions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('ques_number');
+            $table->string('question') ;
+            $table->string('title') ;
             $table->integer('box_id')->unsigned();
             $table->foreign('box_id')->references('id')->on('boxes')->constrained()->onDelete('cascade');
             $table->integer('ques_mark') ;

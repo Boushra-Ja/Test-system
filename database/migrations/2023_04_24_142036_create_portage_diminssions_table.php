@@ -9,7 +9,7 @@ return new class extends Migration
 
     public function up(): void
     {
-        Schema::create('difficult_titles', function (Blueprint $table) {
+        Schema::create('portage_diminssions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title') ;
             $table->timestamps();
@@ -19,6 +19,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('difficult_titles');
+        Schema::dropIfExists('portage_diminssions');
     }
 };

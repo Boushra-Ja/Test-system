@@ -121,6 +121,87 @@ class BoxSeeder extends Seeder
             'dim_id' => PortageDiminssion::where('title', 'بعد العناية الذاتية')->value('id')
 
         ]);
+        ///////////////////////////
+        Box::create([
+            'start_age' => 1,
+            'end_age' => 6,
+            'mark_age' => 1,
+            'id' => 14,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 6,
+            'end_age' => 12,
+            'mark_age' => 1,
+            'id' => 15,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 12,
+            'end_age' => 18,
+            'mark_age' => 1,
+            'id' => 16,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 18,
+            'end_age' => 24,
+            'mark_age' => 1,
+            'id' => 17,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 24,
+            'end_age' => 30,
+            'mark_age' => 1,
+            'id' => 18,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 30,
+            'end_age' => 36,
+            'mark_age' => 1,
+            'id' => 19,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 36,
+            'end_age' => 42,
+            'mark_age' => 1,
+            'id' => 20,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 42,
+            'end_age' => 54,
+            'mark_age' => 1,
+            'id' => 21,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 54,
+            'end_age' => 66,
+            'mark_age' => 1,
+            'id' => 22,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
+        Box::create([
+            'start_age' => 66,
+            'end_age' => 78,
+            'mark_age' => 1,
+            'id' => 23,
+            'dim_id' => PortageDiminssion::where('title', 'البعد الاتصالي')->value('id')
+
+        ]);
 
 
 

@@ -26,5 +26,9 @@ class PortageDiminssionSeeder extends Seeder
             'title' => 'البعد الاتصالي' ,
 
         ]);
+        PortageDiminssion::create([
+            'title' => 'البعد المعرفي' ,
+
+        ]);
     }
 }

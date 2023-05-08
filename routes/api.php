@@ -1,7 +1,10 @@
 <?php
 
+use App\Mail\NotifyMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::post('seand', [App\Http\Controllers\SendEmail2Controller::class, 'basic_email']);
+Route::get('make_code', [App\Http\Controllers\SendEmail2Controller::class, 'make_code']);
+Route::post('register', [App\Http\Controllers\SendEmail2Controller::class, 'register']);
+Route::post('login', [App\Http\Controllers\SendEmail2Controller::class, 'login']);
+

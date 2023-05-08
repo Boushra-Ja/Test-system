@@ -23,8 +23,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::post('seand', [App\Http\Controllers\SendEmail2Controller::class, 'basic_email']);
+Route::post('send', [App\Http\Controllers\SendEmail2Controller::class, 'basic_email']);
 Route::get('make_code', [App\Http\Controllers\SendEmail2Controller::class, 'make_code']);
-Route::post('register', [App\Http\Controllers\SendEmail2Controller::class, 'register']);
-Route::post('login', [App\Http\Controllers\SendEmail2Controller::class, 'login']);
+Route::post('verification', [App\Http\Controllers\CodeController::class, 'verification']);
+Route::post('login', [App\Http\Controllers\CodeController::class, 'login']);
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::post('stor_child', [App\Http\Controllers\ChildController::class,'stor']);
+   // Route::post('age_child', [App\Http\Controllers\ChildController::class,'age']);
+
+});

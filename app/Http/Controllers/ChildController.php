@@ -5,62 +5,43 @@ namespace App\Http\Controllers;
 use App\Models\Child;
 use App\Http\Requests\StoreChildRequest;
 use App\Http\Requests\UpdateChildRequest;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class ChildController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    public function stor(Request $request){
+
+        $dateOfBirth = $request->age;
+        $years = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%y') ;
+        $months = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%m') ;
+        $days = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%d') ;
+
+        $age = ($years * 12 )+ $months ;
+
+        $child=  Child::create([
+            'name' => $request->name ,
+            'age'=>$age,
+            'user_id'=>$request->user_id,
+        ]);
+        if($child)
+                return response()->json([
+                    'message'=>'Store child successfully',
+                    'child' => $child,
+                ]);
+
+        else {
+                return $this->sendErrors('failed in Store child', ['error' => 'not true']);
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    public function age(Request $request){
+        $dateOfBirth = $request->age;
+        $years = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%y') ;
+        $months = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%m') ;
+        $days = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%d') ;
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreChildRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Child $child)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Child $child)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateChildRequest $request, Child $child)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Child $child)
-    {
-        //
+        $age = ($years * 12 )+ $months ;
+        return $age;
     }
 }

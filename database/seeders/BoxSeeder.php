@@ -418,7 +418,7 @@ class BoxSeeder extends Seeder
             'start_age' => 1,
             'end_age' => 6,
             'mark_age' => 1,
-            'id' => 1,
+            'id' => 49,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -426,7 +426,7 @@ class BoxSeeder extends Seeder
             'start_age' => 6,
             'end_age' => 12,
             'mark_age' => 1,
-            'id' => 2,
+            'id' => 50,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -435,7 +435,7 @@ class BoxSeeder extends Seeder
             'start_age' => 12,
             'end_age' => 18,
             'mark_age' => 1,
-            'id' => 3,
+            'id' => 51,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -444,7 +444,7 @@ class BoxSeeder extends Seeder
             'start_age' => 18,
             'end_age' => 24,
             'mark_age' => 1,
-            'id' => 4,
+            'id' => 52,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -452,7 +452,7 @@ class BoxSeeder extends Seeder
             'start_age' => 24,
             'end_age' => 30,
             'mark_age' => 1,
-            'id' => 5,
+            'id' => 53,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -460,7 +460,7 @@ class BoxSeeder extends Seeder
             'start_age' => 30,
             'end_age' => 36,
             'mark_age' => 1,
-            'id' => 6,
+            'id' => 54,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -468,7 +468,7 @@ class BoxSeeder extends Seeder
             'start_age' => 36,
             'end_age' => 42,
             'mark_age' => 1,
-            'id' => 7,
+            'id' => 55,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -477,7 +477,7 @@ class BoxSeeder extends Seeder
             'start_age' => 42,
             'end_age' => 54,
             'mark_age' => 1,
-            'id' => 8,
+            'id' => 56,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -485,7 +485,7 @@ class BoxSeeder extends Seeder
             'start_age' => 54,
             'end_age' => 66,
             'mark_age' => 1,
-            'id' => 9,
+            'id' => 57,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);
@@ -493,7 +493,7 @@ class BoxSeeder extends Seeder
             'start_age' => 66,
             'end_age' => 78,
             'mark_age' => 1,
-            'id' => 10,
+            'id' => 58,
             'dim_id' => PortageDiminssion::where('title', 'البعد المعرفي')->value('id')
 
         ]);

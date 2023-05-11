@@ -13,7 +13,7 @@ class PortageQuestionController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

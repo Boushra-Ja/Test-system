@@ -12,7 +12,8 @@ class HelpPortege extends Model
         'start',
         'true',
         'false',
-        'child_id'
+        'child_id',
+        'true_box_id'
 
     ];
 }

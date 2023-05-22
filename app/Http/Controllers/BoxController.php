@@ -19,8 +19,12 @@ class BoxController extends Controller
     public function index(Request $request)
     {
         $age=Child::where('id',$request->child_id)->first();
-        
-        $box=Box::where('dim_id',$request->dim_id)->where('start_age','<=',$age->age)->where('end_age','>=',$age->age)->first();
+        $box1=Box::where('dim_id',$request->dim_id)->where('start_age','<=',$age->age)->where('end_age','>=',$age->age)->first();
+        if($request->disability == "true")
+           $box=Box::where('id',$box1->id-2)->first();
+        else
+           $box=Box::where('id',$box1->id-1)->first();
+
         $q=PortageQuestion::where('box_id',$box->id)->get();
 
         $ans=  HelpPortege::create([

@@ -31,6 +31,7 @@ class BoxController extends Controller
             'start' => $box->id ,
             'true'=>"0",
             'false'=>"0",
+            'true_box_id'=>1,
             'child_id'=>$request->child_id
         ]);
 
@@ -66,12 +67,26 @@ class BoxController extends Controller
 
         if($res->true != 2){
             if($counter ==  $count_true){
-                $t=$res->true+1;
-                $res->update(
+                if($res->true_box_id == ($request->box_id+1) || $res->true_box_id == 1){
+                   $t=$res->true+1;
+                   $res->update(
                     [
                         'true'=>$t,
+                        'true_box_id'=>$request->box_id,
+
                     ]
                 );
+                }
+                else{
+                   $t=1;
+                    $res->update(
+                        [
+                            'true'=>$t,
+                            'true_box_id'=>$request->box_id,
+
+                        ]
+                    );
+                }
                 if($t==2){
                     if($res->false == 0){
                         $box=Box::where('id',($res->start+1))->first();

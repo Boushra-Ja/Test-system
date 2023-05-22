@@ -15,6 +15,8 @@ return new class extends Migration
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->string('ques_mark');
+            $table->integer('box_id')->unsigned();
+            $table->foreign('box_id')->references('id')->on('boxes')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

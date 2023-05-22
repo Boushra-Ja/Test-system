@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('codes', function (Blueprint $table) {
+        Schema::create('help_porteges', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code');
+            $table->integer('start') ;
+            $table->integer('true') ;
+            $table->integer('false') ;
+            $table->integer('child_id')->unsigned();
+            $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('codes');
+        Schema::dropIfExists('help_porteges');
     }
 };

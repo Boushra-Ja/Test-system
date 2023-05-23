@@ -13,7 +13,6 @@ class PortageQuestionSeeder extends Seeder
     public function run(): void
     {
 
-        ////////////@Boshra ////////////
         /////بعد العناية الذاتية
         //////Box 1
         PortageQuestion::create([
@@ -435,6 +434,25 @@ class PortageQuestionSeeder extends Seeder
             'ques_mark' => 4,
 
         ]) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         ///////////////////////////////////////////////
         //////////////البعد الاتصالي //////
         PortageQuestion::create([
@@ -842,8 +860,22 @@ class PortageQuestionSeeder extends Seeder
 
         ]) ;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         ////////////البعد الحركي//////////////
-        /////Box 27
+
         PortageQuestion::create([
             'ques_number' => 1,
             'box_id' => 27,
@@ -1222,10 +1254,21 @@ class PortageQuestionSeeder extends Seeder
             'ques_mark' => 4,
 
         ]) ;
+
+
+
+
+
+
+
+
+
+
+
         //البعد الاجتماعي
         PortageQuestion::create([
             'ques_number' => 1,
-            'box_id' => 36,
+            'box_id' => 40,
             'question' =>  'هل يظهر الطفل أنه يريد الانتباه إليه؟ يتضمن هذا مد يده إلى أشخاص أو مناغاتهم أو وقوف البكاء عندما يلعب معه أحد (ولكن لا يحمله)',
             'title' =>  'ملاحظة مباشرة',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1234,7 +1277,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 2,
-            'box_id' => 36,
+            'box_id' => 40,
             'question' =>  'هل يثرثر الطفل أو يصدر أصواتاً قد تعتبر مخاولات للحديث؟ لا يتضمن هذا البكاء للحصولعلى انتباه أحد أو زجاجة الرضاعة',
             'title' =>  'ملاحظة مباشرة',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1243,7 +1286,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 3,
-            'box_id' => 36,
+            'box_id' => 40,
             'question' =>  'هل يظهر الطفل انفعالات سلبية(كالغضب , الرفض , الخوف , أو لارتداء)لأشياء غير مألوفة من الناحية الجسمية مثل الطعام المكروه أو الغرباء؟',
             'title' =>  'ملاحظة مباشرة',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1252,7 +1295,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 4,
-            'box_id' => 37,
+            'box_id' => 41,
             'question' =>  'هل يؤشر الطفل (باي باي) في الأوقات المناسبة, أو هل يصفق مقلداً أو عندما يلعب معه أحد؟',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1261,7 +1304,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 5,
-            'box_id' => 37,
+            'box_id' => 41,
             'question' =>  'هل يظهر الطفل أنه يفهم معنى لي (يفهم عندما يقول أحد سيارتي أو أمي)؟',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1270,7 +1313,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 6,
-            'box_id' => 37,
+            'box_id' => 41,
             'question' =>  'هل يأتي الطفل عند الطلب منه 25% من الوقت على الأقل ؟',
             'title' =>  '',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1279,7 +1322,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 7,
-            'box_id' => 38,
+            'box_id' => 42,
             'question' =>  'هل يحي الطفل الكبار المألوفين لديه بأن يتحرك باتجاههم أو يحاول لفت نظرهم أو مد يده نحوهم للسلام عليهم',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1288,7 +1331,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 8,
-            'box_id' => 38,
+            'box_id' => 42,
             'question' =>  'هل يبقى الطفل مشغول لمدة 15 دقيقة و هو يفعل شيئاً مما يلي : ينظر الى التلفاز , يرسم بقلم , يبني , ينظر الى الصورة؟ قد يفعل هذا لوحده أو مع أطفال آخرين , ولكن ليس بمراقبة الكبار',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1297,7 +1340,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 9,
-            'box_id' => 38,
+            'box_id' => 42,
             'question' =>  'هل يهتم الطفل بالأشياء و الألعاب التي يحبها الأطفال الآخرين؟ قد لا يستطيع الطفل أن يشارك أو يلعب بالدور مع أطفال آخرين',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1306,7 +1349,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 10,
-            'box_id' => 39,
+            'box_id' => 43,
             'question' =>  'هل يغار الطفل عندما ينتبه أحد إلى أشخاص آخرين خصوصاً أشخاص من العائلة ؟ قد تظهر الغيرة كالغضب أو التصرفات الطفولية أو الفوضوية أو طلب أن يكون محمول أو أي تغيرات خرى',
             'title' =>  'ملاحظة مباشرة أو سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1315,7 +1358,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 11,
-            'box_id' => 39,
+            'box_id' => 43,
             'question' =>  'هل يلعب الطفل بلعبة سهلة الكسر مثل بالون أو طيارة أو سيارة من الكرتون دون أن يكسرها فوراً ؟ قد تنكسر اللعبة لاحقاً لكن بعد أن يلعب الطفل بها بطريقة صحيحة (أداة رقم 3)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1324,7 +1367,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 12,
-            'box_id' => 39,
+            'box_id' => 43,
             'question' =>  'هل يكتشف الطفل الأماكن الجديدة كبيت صديق أو حديقة جار؟ لا تكفي العين فقط',
             'title' =>  'سؤالأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1333,7 +1376,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 13,
-            'box_id' => 40,
+            'box_id' => 44,
             'question' =>  'هل يذكر الطفل جنسه أو جنس الآخرين؟ مقبول منه اظهار أنه يعرف أن ملابس أو انشطة أو ألعاب تناسب جنساً دون آخر',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1342,7 +1385,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 14,
-            'box_id' => 40,
+            'box_id' => 44,
             'question' =>  'هل يظهر الطفل رغبته في مساعدة والديه في البيت ؟ (يستمتع بأداء بعض الأنشطة كإلتقاط الأشياء عن الأرض , وضع ورق الشجر في القمامة , تنظيف الغبار , إعداد مائدة الطعام و رفعها)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1351,7 +1394,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 15,
-            'box_id' => 40,
+            'box_id' => 44,
             'question' =>  'هل يطلب الطفل الذهاب إلى الحمام ؟ ليس بمجرد إظهار العصبية (الاشارات مقبولة)',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1360,7 +1403,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 16,
-            'box_id' => 41,
+            'box_id' => 45,
             'question' =>  'هل يأتي الطفل بشيء من مكان إلى آخر أو من شخص إلى آخر ,يجب عليه أن يجد الشيء وينفذ بإشادات شفوية مثل ( تعال به هنا , أحضره لماما )',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1369,7 +1412,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 17,
-            'box_id' => 41,
+            'box_id' => 45,
             'question' =>  'هل يظهر محاولات لتقليد دور الكبار مثال : (أن يرتدي ملابسهم و يقلد حركاتهم)',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1378,7 +1421,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 18,
-            'box_id' => 41,
+            'box_id' => 45,
             'question' =>  'هل يلعب الطفل بالألعاب بطريقة صحيحة؟ ( لا يجر عربة على رأسها بدلا من العجلات ,لا يستعمل البندقية لقطع الشجرة , ولا يمشي على الألعاب الكرتونية) قد يحدث هذا ولكن ليس كثيراً (أداة رقم 6 )',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1387,7 +1430,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 19,
-            'box_id' => 42,
+            'box_id' => 46,
             'question' =>  'هل يتبع الطفل القواعد في ألعاب جماعية يشرف عليها شخص كبير؟ قد تشمل الجلوس في دائرة , التتابع , التوجيهات , تقليد القائد ,أو تقليد أنشطة أفراد جماعة آخرين',
             'title' =>  'سؤال الأم ',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1396,7 +1439,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 20,
-            'box_id' => 42,
+            'box_id' => 46,
             'question' =>  'هل يلعب قرب أو يتحدث مع أطفال آخرين عندما يعمل بمشروعه الخاص لمدة 30 دقيقة؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1405,7 +1448,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 21,
-            'box_id' => 42,
+            'box_id' => 46,
             'question' =>  'هل يعرف الطفل مفهوم الملكية (يطلب الأذن من الآخرين قبل أخذ أغراضهم الشخصية )؟',
             'title' =>  'تطبيق مباشر سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1414,7 +1457,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 22,
-            'box_id' => 43,
+            'box_id' => 47,
             'question' =>  'هل يلعب الطفل بالدور؟ يعني هذا أن ينتظر شخصاًآخر يلعب قبله و يسمح للآخرين أن يلعبوا الأول 75% من الوقت',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1423,7 +1466,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 23,
-            'box_id' => 43,
+            'box_id' => 47,
             'question' =>  'هل يقول الطفل التعبيرات التالية (شكراً),(من فضلك),(عفواً),في الأوقات المناسبة؟',
             'title' =>  'تطبيق مباشر سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1432,7 +1475,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 24,
-            'box_id' => 44,
+            'box_id' => 48,
             'question' =>  'هل يسأل الطفل عن أحوال االكبار و المرضى ؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1441,7 +1484,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 25,
-            'box_id' => 44,
+            'box_id' => 48,
             'question' =>  'هل يخبر الطفل عن شعور الآخرين بقوله هو (غاضب , خائف , قلق ) عليه أن يدرك الشعور المضبوط؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1450,7 +1493,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 26,
-            'box_id' => 45,
+            'box_id' => 49,
             'question' =>  'هل يجيب الطفل عن أسئلة الكبار الموجهة له حول ألعابه أو اهتماماته؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1459,7 +1502,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 27,
-            'box_id' => 45,
+            'box_id' => 49,
             'question' =>  'هل يزور الفل صديقاً (يقبل أطفال الأقارب و الجيران) و يلعب معه دون مراقبة شخص كبير؟ (عدا التأكد من الكبار عن وجوده مرة كل ساعة) يجب على الصديق أن لا يكون أكبر من الطفل بأكثر من سنة واحدة',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1468,7 +1511,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 28,
-            'box_id' => 45,
+            'box_id' => 49,
             'question' =>  'هل يواسي الطفل أصدقاء اللعب و يقدم لهم المساعدة عند الحاجة لذلك (السقوط , الاصابة .....الخ)',
             'title' =>  'سؤال الطفل',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1477,7 +1520,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 29,
-            'box_id' => 46,
+            'box_id' => 50,
             'question' =>  'هل ينجز الطفل مهمة حقيقية واحدة (مرة أسبوعياً على الأقل)؟ كغسل الصحون , تنظيف الحديقة ,ترتيب سريره , إخراج سلة القمامة , تنظيف الغبار ,على أن يؤدي المهمة بشكل جيد دون تشجيع',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1486,7 +1529,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 30,
-            'box_id' => 46,
+            'box_id' => 50,
             'question' =>  'هل يصوت الطفل و يقبل أن رأي االأغلبية هو أساس اتخاذ أي قرار ؟',
             'title' =>  'سؤال الطفل',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1495,7 +1538,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 31,
-            'box_id' => 47,
+            'box_id' => 51,
             'question' =>  'هل يقوم الطفل بقائمة مهمات منزلية لوحده و ينفذها بشكل مقبول دون التذكير على الاطلاق؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1504,7 +1547,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 32,
-            'box_id' => 47,
+            'box_id' => 51,
             'question' =>  'هل قال الطفل أن الشمس لن تعطيه سناً بدل السن المخلوع الذي يرميه عادة لأنهاقصة خيالية و كذلك بالنسبة للجنية  , أو الساحرة , و أنها مجرد قصص خيالية؟',
             'title' =>  'سؤال الطفل',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1513,7 +1556,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 33,
-            'box_id' => 48,
+            'box_id' => 52,
             'question' =>  'هل يتجول الطفل بحرية عند ذهابه إلى مكان عام يتواجد فيه قرب أفراد أسرته ولكن دون مراقبة مستمرة منهم؟',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1522,7 +1565,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 34,
-            'box_id' => 48,
+            'box_id' => 52,
             'question' =>  'هل يعبر الطفل عن سعادته للوقت الذي يقضيه مع أقرانه؟',
             'title' =>  'سؤال الطفل',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1531,7 +1574,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 35,
-            'box_id' => 48,
+            'box_id' => 52,
             'question' =>  'هل يشتري الطفل بدون مساعدة الأشياء المفيدة مث الهدايا للآخرين, مشتريات العائلة؟ يجب عليه أن يعرف كم من النقود يحتاج اليها و أن يختار الأشياء المناسبة وأن يحصل على مبلغ الفكة المطلوب',
             'title' =>  'سؤال الطفل',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1539,11 +1582,25 @@ class PortageQuestionSeeder extends Seeder
 
         ]) ;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //////المعرفي
         /// Box 1////
         PortageQuestion::create([
             'ques_number' => 1,
-            'box_id' => 49,
+            'box_id' => 53,
             'question' =>  'هل يزيد نشاط الطفل او يقل عندما يدخل أحد الغرفة أو عندما يلتقطه أحد ',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1551,7 +1608,7 @@ class PortageQuestionSeeder extends Seeder
             ]) ;
         PortageQuestion::create([
             'ques_number' => 2,
-            'box_id' => 49,
+            'box_id' => 53,
             'question' =>  'هل ينتبه الطفل الى أداة أو شخص لمدة دقيقة عاى الأقل؟ لا يتضمن هذا أدوات التغذية مثل (زجاجة الرضاعة (أداة رقم 8))',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1560,7 +1617,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 2////
         PortageQuestion::create([
             'ques_number' => 3,
-            'box_id' => 50,
+            'box_id' => 54,
             'question' =>  'هل يحب الطفل أو لا يحب الطفل أشخاص أو أدوات معينة ويعبر عن ذلك؟(لا يشتمل هذا الطعام) ',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1568,7 +1625,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 4,
-            'box_id' => 50,
+            'box_id' => 54,
             'question' =>  'هل يبحث الطفل في المكان المناسب عن أداة رفعت بعيدا عن نظرة أم ينساها ؟ كأن يبحث عن لعبة أخفيت في مكان ما تحت مائدة أو وسادة',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1577,7 +1634,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 3////
         PortageQuestion::create([
             'ques_number' => 5,
-            'box_id' => 51,
+            'box_id' => 55,
             'question' =>   'هل يخرش الطفل بقلم الرصاص في محاولة واضحة لرسم علامات (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1585,7 +1642,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 6,
-            'box_id' => 51
+            'box_id' => 55
             ,
             'question' =>   'هل يشير الطفل الى جزء جسمي واحد على الأقل (على جسمه أو على دمية -لعبة- عندما يطلب منه ذلك',
             'title' =>  'تطبيق مباشر',
@@ -1595,7 +1652,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 4////
         PortageQuestion::create([
             'ques_number' => 7,
-            'box_id' => 52,
+            'box_id' => 56,
             'question' =>  'هل يعطي الطفل المزيد من الشيء أو يطلب المزيد ملء ملعقة من الطعام عندما يطلب منه ؟',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1603,7 +1660,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 8,
-            'box_id' => 52,
+            'box_id' => 56,
             'question' =>  'هل يذكر الطفل أو يشير الى 10 صور أو أدوات على الأقل عندما يسأل عنها (أداة رقم 7)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1611,7 +1668,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 9,
-            'box_id' => 52,
+            'box_id' => 56,
               'question' =>  'هل يعرف الطفل نفسه في الصور',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1621,7 +1678,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 5////
         PortageQuestion::create([
             'ques_number' => 10,
-            'box_id' => 53,
+            'box_id' => 57,
             'question' =>  ' هل يصنف الطفل الأدوات تبعا للشكل أو الحجم عندما يلعب (أداة رقم 1)',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1629,7 +1686,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 11,
-            'box_id' => 53,
+            'box_id' => 57,
             'question' =>  ' هل ينسخ الطفل خطا رأسيا مقلدا خطا رسمه شخص كبير (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1637,7 +1694,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 12,
-            'box_id' =>53,
+            'box_id' =>57,
             'question' =>  '   هل يقول الطفل كلمات تتعلق بالحجم مثل كبير وصغير وبالاستعمال المضبوط (تقب الاشارة من الأطفال ذوي التأخير اللغوي)؟ (أداة رقم 15 +16 )',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1646,7 +1703,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 6////
         PortageQuestion::create([
             'ques_number' => 13,
-            'box_id' => 54,
+            'box_id' => 58,
             'question' =>  ' هل يعد الطفل الى ثلاثة ؟(يعد ثلاثة أشياء موجوده أمامه بشكل صحيح اذا طلب منه ذلك (أداه رقم 20 عدد 3)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1654,7 +1711,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 14,
-            'box_id' => 54,
+            'box_id' => 58,
             'question' =>  ' هل ينسخ الطفل شكل الدائرة بقلم رصاص ؟ قد يرسم الحركه الدائرية (أداة رقم 13+22+23) ',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1662,7 +1719,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 15,
-            'box_id' => 54,
+            'box_id' => 58,
             'question' =>  ' هل يشير الطفل الى لونين على الأقل بشكل مضبوط عند الطلب (أداة رقم 1)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1671,7 +1728,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 7////
         PortageQuestion::create([
             'ques_number' => 16,
-            'box_id' => 55,
+            'box_id' => 59,
             'question' =>
                 'هل يعد الطفل الى سته ؟(يعد 6 أشياء موضوعة أمامه بشكل صحيح اذا طلب منه ذلك (أداة رقم 20 عدد 6))',
             'title' =>  'تطبيق مباشر',
@@ -1680,7 +1737,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 17,
-            'box_id' => 55,
+            'box_id' => 59,
             'question' =>  ' هل يقول الطفل الوقت من النهار المربوط بأنشطة معينة ؟ (الفطور وجبة الصباح _ عندما تظلم الدنيا ننام )',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1688,7 +1745,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 18,
-            'box_id' => 55,
+            'box_id' => 59,
             'question' =>  'هل يرسم الطفل اشارة + بحط رأسي وخط متقطع أفقي بعد أن يرسمه شخص كبير (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1700,7 +1757,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 8////
         PortageQuestion::create([
             'ques_number' => 19,
-            'box_id' => 56,
+            'box_id' => 60,
             'question' =>  'هل يرسم الطفل شخص(رأس وجزء اخر من الجسم هلى الأقل )عندما يطلب منه ذلك (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1708,7 +1765,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 20,
-            'box_id' => 56,
+            'box_id' => 60,
             'question' =>  ' هل يكرر الطفل نمطا بصريا موضوعا أمامه (دائرة-مربع-دائرة-مربع .... الخ)(أداة رقم 2)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1716,7 +1773,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 21,
-            'box_id' => 56,
+            'box_id' => 60,
             'question' =>  'هل يرسم أو ينسخ الطفل مربعا ؟ يجب أن تكون زاويه قائمة وأضلاعه الأربعة متساوية (أداة رقم 13+22) ',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1727,7 +1784,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 9////
         PortageQuestion::create([
             'ques_number' => 22,
-            'box_id' => 57,
+            'box_id' => 61,
             'question' =>  'هل يشير الطفل الى أنواع العملة المتداولة عند ذكرها (5 قروش- 10 قروش ونصف -دينار)(أداة رقم 21)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1735,7 +1792,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 23,
-            'box_id' => 57,
+            'box_id' => 61,
             'question' =>  'هل يرسم الطفل شخص (رأس-جسم-ذراعان-قدملن-ولو مجرد خطوط)  عندما يطلب منه ذلك (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1743,7 +1800,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 24,
-            'box_id' => 57,
+            'box_id' => 61,
             'question' =>  'هل يرسم أو ينسخ الطفل مثلثا؟ يجب أن تكون أضلاعه متساوية تقريبا (أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1754,7 +1811,7 @@ class PortageQuestionSeeder extends Seeder
         /// Box 10////
         PortageQuestion::create([
             'ques_number' => 25,
-            'box_id' => 58,
+            'box_id' => 62,
             'question' =>  'هل يخرج الطفل 13 أداة من بين 20 أداة ؟(أداة رقم 20 عدد 20)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1762,7 +1819,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 26,
-            'box_id' => 58,
+            'box_id' => 62,
             'question' =>  'هل يخبر الطفل عن عنوان سكنه ؟ يتضمن ذلك اسم الشارع رقم البيت أو اسم مكان معروف بجانب بيته؟(العنوان في الريف أقل تحديدا)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1770,7 +1827,7 @@ class PortageQuestionSeeder extends Seeder
         ]) ;
         PortageQuestion::create([
             'ques_number' => 27,
-            'box_id' => 58,
+            'box_id' => 62,
             'question' =>  'هل يرد الطفل على أسئلة بسيطة عن حقائق رئيسية في قصة سردت عليه (على أن لا تزيد القصة عن 10 جمل تقريبا وتكون الأسئله حول الشخصيات الرئيسيةوالأحداش العامة في القصة)؟',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
@@ -1780,62 +1837,62 @@ class PortageQuestionSeeder extends Seeder
         //Box11
         PortageQuestion::create([
             'ques_number' => 28,
-            'box_id' => 59,
+            'box_id' => 63,
             'question' =>  'هل يتقن الطفل مهارات القراءه والكتابه والحساب الخاصه بمستوى الصف الثاني الابتدائي',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 4,
         ]) ;
 
         PortageQuestion::create([
             'ques_number' => 29,
-            'box_id' => 59,
+            'box_id' => 63,
             'question' =>  'هل يكتب الطفل الحروف بصورة جيدة؟(أداة رقم 22+13)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 4,
         ]) ;
         PortageQuestion::create([
             'ques_number' => 30,
-            'box_id' => 59,
+            'box_id' => 63,
             'question' =>  'هل يذكر الطفل أيام الأسبوع ويعرف اليوم السابق واللاحق لكل يوم؟(مثال ماهو اليوم الذي يجيء قبل الخميس)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 4,
         ]) ;
          //Box 12
         PortageQuestion::create([
             'ques_number' => 31,
-            'box_id' => 60,
+            'box_id' => 64,
             'question' =>  'هل يكتب الطفل بخط الرقعة ولا يستعمل النسخ؟(أداة رقم 13+22)',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 6,
         ]) ;
         PortageQuestion::create([
             'ques_number' => 32,
-            'box_id' => 60,
+            'box_id' => 64,
             'question' =>  'هل يتقن الطفل مهارات القراءه والكتابه والحساب الخاصة بمستوى الطفل الثالث البتدائي',
             'title' =>  'سؤال الأم',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 6,
         ]) ;
         //Box 13
         PortageQuestion::create([
             'ques_number' => 33,
-            'box_id' => 61,
+            'box_id' => 65,
             'question' =>  'هل يقول الطفل جدول الضرب حتى الرقم6 بأخطاء قليلة مثال 6-9-5-8-4-3  الح',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 6,
         ]) ;
         PortageQuestion::create([
             'ques_number' => 34,
-            'box_id' => 61,
+            'box_id' => 65,
             'question' =>  'هل يجيب الطفل على الأسئلة الرقميةالتاليه : ما هو نمرة حذاءك؟ما هو رقم هاتف منرلك؟ما هو تاريخ ميلادك؟',
             'title' =>  'تطبيق مباشر',
             'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
-            'ques_mark' => 1,
+            'ques_mark' => 6,
         ]) ;
 
 

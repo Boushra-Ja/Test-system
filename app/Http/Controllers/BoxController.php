@@ -32,7 +32,9 @@ class BoxController extends Controller
             'true'=>"0",
             'false'=>"0",
             'true_box_id'=>1,
-            'child_id'=>$request->child_id
+            'false_box_id'=>1,
+            'child_id'=>$request->child_id,
+            'mark'=>0
         ]);
 
         return response()->json([
@@ -56,8 +58,9 @@ class BoxController extends Controller
                 'box_id'=>$request->box_id
             ]);
             $counter++;
-            if($item['ques_mark'] == "true")
-               $count_true++;
+            if($item['ques_mark'] == "true"){
+                $count_true++;
+            }
             else
                 $count_false++;
         }
@@ -88,7 +91,7 @@ class BoxController extends Controller
                     );
                 }
                 if($t==2){
-                    if($res->false == 0){
+                    if($res->false !=2){
                         $box=Box::where('id',($res->start+1))->first();
                         $q=PortageQuestion::where('box_id',$box->id)->get();
                         return response()->json([
@@ -120,15 +123,26 @@ class BoxController extends Controller
         }
 
         if($count_false == $counter){
-            $res->update(
-                [
-                    'false'=>$request->box_id,
-                ]
-            );
 
-            return response()->json([
-                'result' => 'end',
-            ]);
+            if($res->false == 1 && $res->false_box_id==$request->box_id){
+
+                $res->delete();
+
+                return response()->json([
+                    'result' => 'end',
+                ]);
+
+            }
+            else{
+
+                $res->update(
+                    [
+                        'false'=>1,
+                        'false_box_id'=>$request->box_id
+                    ]);
+
+            }
+
 
         }
 

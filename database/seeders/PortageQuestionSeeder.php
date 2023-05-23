@@ -1777,6 +1777,75 @@ class PortageQuestionSeeder extends Seeder
             'ques_mark' => 4,
         ]) ;
 
+        //Box11
+        PortageQuestion::create([
+            'ques_number' => 28,
+            'box_id' => 59,
+            'question' =>  'هل يتقن الطفل مهارات القراءه والكتابه والحساب الخاصه بمستوى الصف الثاني الابتدائي',
+            'title' =>  'سؤال الأم',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+
+        PortageQuestion::create([
+            'ques_number' => 29,
+            'box_id' => 59,
+            'question' =>  'هل يكتب الطفل الحروف بصورة جيدة؟(أداة رقم 22+13)',
+            'title' =>  'تطبيق مباشر',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 30,
+            'box_id' => 59,
+            'question' =>  'هل يذكر الطفل أيام الأسبوع ويعرف اليوم السابق واللاحق لكل يوم؟(مثال ماهو اليوم الذي يجيء قبل الخميس)',
+            'title' =>  'تطبيق مباشر',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+         //Box 12
+        PortageQuestion::create([
+            'ques_number' => 31,
+            'box_id' => 60,
+            'question' =>  'هل يكتب الطفل بخط الرقعة ولا يستعمل النسخ؟(أداة رقم 13+22)',
+            'title' =>  'تطبيق مباشر',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 32,
+            'box_id' => 60,
+            'question' =>  'هل يتقن الطفل مهارات القراءه والكتابه والحساب الخاصة بمستوى الطفل الثالث البتدائي',
+            'title' =>  'سؤال الأم',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+        //Box 13
+        PortageQuestion::create([
+            'ques_number' => 33,
+            'box_id' => 61,
+            'question' =>  'هل يقول الطفل جدول الضرب حتى الرقم6 بأخطاء قليلة مثال 6-9-5-8-4-3  الح',
+            'title' =>  'تطبيق مباشر',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+        PortageQuestion::create([
+            'ques_number' => 34,
+            'box_id' => 61,
+            'question' =>  'هل يجيب الطفل على الأسئلة الرقميةالتاليه : ما هو نمرة حذاءك؟ما هو رقم هاتف منرلك؟ما هو تاريخ ميلادك؟',
+            'title' =>  'تطبيق مباشر',
+            'type_id' => DifficultTitle::where('title' , 'الصورة الجانبية')->value('id') ,
+            'ques_mark' => 1,
+        ]) ;
+
+
+
+
+
+
+
+
+
 
 
 

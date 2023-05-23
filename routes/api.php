@@ -33,5 +33,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('first_box', [App\Http\Controllers\BoxController::class,'index']);
     Route::post('continue_box', [App\Http\Controllers\BoxController::class,'store_index']);
 
+
 });
 

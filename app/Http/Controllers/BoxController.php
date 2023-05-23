@@ -115,6 +115,29 @@ class BoxController extends Controller
                 }
 
             }
+            if($count_false == $counter){
+
+                if($res->false == 1 && $res->false_box_id==$request->box_id+1){
+
+                    $res->update(
+                        [
+                            'false'=>2,
+                            'false_box_id'=>$request->box_id
+                        ]);
+
+                }
+                else{
+
+                    $res->update(
+                        [
+                            'false'=>1,
+                            'false_box_id'=>$request->box_id
+                        ]);
+
+                }
+
+
+            }
             $box=Box::where('id',($request->box_id-1))->first();
             $q=PortageQuestion::where('box_id',$box->id)->get();
             return response()->json([
@@ -124,9 +147,9 @@ class BoxController extends Controller
 
         if($count_false == $counter){
 
-            if($res->false == 1 && $res->false_box_id==$request->box_id){
+            if($res->false == 1 && $res->false_box_id==$request->box_id-1){
 
-                $res->delete();
+                //$res->delete();
 
                 return response()->json([
                     'result' => 'end',
@@ -152,6 +175,29 @@ class BoxController extends Controller
             'question' => $q,
         ]);
 
+
+    }
+
+
+    public function result(int $child_id ){
+
+        $res=HelpPortege::where('child_id',$child_id)->first();
+
+        $rule=Box::where('id',$res->true_box_id+1)->value('mark_age');
+
+        $true=PortageAnswer::where('child_id',$child_id)->where('ques_mark','true')->get();
+
+        $all=$rule*12;
+
+        foreach($true as $t){
+            $all=$all+ PortageQuestion::where('id',$t->ques_id)->value('ques_mark') ;
+        }
+
+        return response()->json([
+            'rule' => $rule,
+            'all'=>$all,
+            'all_y'=>$all/12
+        ]);
 
     }
 

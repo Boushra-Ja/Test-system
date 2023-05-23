@@ -13,7 +13,11 @@ class PortageDiminssionController extends Controller
      */
     public function index()
     {
-        //
+        $res=PortageDiminssion::all();
+
+        return response()->json([
+            'dmantion' => $res,
+        ]);
     }
 
     /**

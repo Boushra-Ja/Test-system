@@ -13,9 +13,7 @@ use Illuminate\Http\Request;
 
 class BoxController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
     public function index(Request $request)
     {
         $age=Child::where('id',$request->child_id)->first();
@@ -99,9 +97,18 @@ class BoxController extends Controller
                         ]);
                     }
                     else
-                    return response()->json([
-                        'result' => 'end',
-                    ]);
+                    {
+                        $agee=$this->result($request->child_id);
+                        $res->delete();
+                        $r=PortageAnswer::where('child_id',$request->child_id)->get();
+                        foreach($r as $w)
+                            $w->delete();
+
+                        return response()->json([
+                            'result' => 'end',
+                            'age'=>$agee
+                        ]);
+                    }
 
 
 
@@ -149,10 +156,17 @@ class BoxController extends Controller
 
             if($res->false == 1 && $res->false_box_id==$request->box_id-1){
 
-                //$res->delete();
+
+                $agee=$this->result($request->child_id);
+                $res->delete();
+                $r=PortageAnswer::where('child_id',$request->child_id)->get();
+                foreach($r as $w)
+                    $w->delete(); //
+
 
                 return response()->json([
                     'result' => 'end',
+                    'age'=>$agee
                 ]);
 
             }
@@ -179,13 +193,13 @@ class BoxController extends Controller
     }
 
 
-    public function result(int $child_id ){
+    public function result(int $child_id_ ){
 
-        $res=HelpPortege::where('child_id',$child_id)->first();
+        $res=HelpPortege::where('child_id',$child_id_)->first();
 
         $rule=Box::where('id',$res->true_box_id+1)->value('mark_age');
 
-        $true=PortageAnswer::where('child_id',$child_id)->where('ques_mark','true')->get();
+        $true=PortageAnswer::where('child_id',$child_id_)->where('ques_mark','true')->get();
 
         $all=$rule*12;
 
@@ -193,59 +207,15 @@ class BoxController extends Controller
             $all=$all+ PortageQuestion::where('id',$t->ques_id)->value('ques_mark') ;
         }
 
-        return response()->json([
+        return [
             'rule' => $rule,
             'all'=>$all,
             'all_y'=>$all/12
-        ]);
-
+        ];
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreBoxRequest $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Box $box)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Box $box)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateBoxRequest $request, Box $box)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Box $box)
-    {
-        //
-    }
 }

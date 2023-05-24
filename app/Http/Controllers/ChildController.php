@@ -12,10 +12,14 @@ class ChildController extends Controller
 {
     public function stor(Request $request){
 
-        $dateOfBirth = $request->age;
+        $dateOfBirth=$request->age;
         $years = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%y') ;
         $months = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%m') ;
         $days = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%d') ;
+        if($days >= 15)
+        {
+            $months = $months + 1 ;
+        }
 
         $age = ($years * 12 )+ $months ;
 
@@ -36,12 +40,25 @@ class ChildController extends Controller
     }
 
     public function age(Request $request){
-        $dateOfBirth = $request->age;
+        $dateOfBirth=$request->age;
         $years = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%y') ;
         $months = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%m') ;
         $days = (int)Carbon ::parse($dateOfBirth)->diff(Carbon::now())->format('%d') ;
+        if($days >= 15)
+        {
+            $months = $months + 1 ;
+        }
 
         $age = ($years * 12 )+ $months ;
         return $age;
+    }
+
+    public function show(){
+        $child=Child::all();
+
+        return response()->json([
+            'child' => $child,
+        ]);
+
     }
 }

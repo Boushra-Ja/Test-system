@@ -17,9 +17,9 @@ class BoxController extends Controller
         $age = Child::where('id', $request->child_id)->first();
         $box1 = Box::where('dim_id', $request->dim_id)->where('start_age', '<=', $age->age)->where('end_age', '>=', $age->age)->first();
         if ($request->disability == 'true') {
-            $box = Box::where('id', $box1->id - 2)->first();
+            $box = Box::where('id', $box1->id - 3)->first();
         } else {
-            $box = Box::where('id', $box1->id - 1)->first();
+            $box = Box::where('id', $box1->id - 2)->first();
         }
 
         $q = PortageQuestion::where('box_id', $box->id)->get();
@@ -206,7 +206,21 @@ class BoxController extends Controller
     {
         $res = HelpPortege::where('child_id', $child_id_)->first();
 
-        $rule = ($res->base ==1) ? 0 : Box::where('id', $res->true_box_id + 1)->value('mark_age');
+        $rule = ($res->base ==1) ? 0 : Box::where('id', $res->true_box_id +1 )->value('mark_age');
+
+
+        $q=PortageAnswer::where('box_id',$res->true_box_id)->get();
+
+        foreach ($q as $t) {
+            $t->delete();
+        }
+
+        $q=PortageAnswer::where('box_id',$res->true_box_id+1)->get();
+
+        foreach ($q as $t) {
+            $t->delete();
+        }
+
 
         $true = PortageAnswer::where('child_id', $child_id_)->where('ques_mark', 'true')->get();
 
@@ -222,7 +236,7 @@ class BoxController extends Controller
         $ans = TestResult::create([
             'child_id' => $child_id_,
             'basal' => $rule,
-            'additional' => $additional/12,
+            'additional' => $additional,
             'dim_id' => $dim,
         ]);
 

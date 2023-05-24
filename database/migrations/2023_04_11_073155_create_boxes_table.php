@@ -13,7 +13,7 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('start_age') ;
             $table->integer('end_age') ;
-            $table->integer('mark_age') ;
+            $table->Double('mark_age') ;
             $table->timestamps();
         });
     }

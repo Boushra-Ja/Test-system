@@ -7,6 +7,7 @@ use App\Models\Child;
 use App\Models\HelpPortege;
 use App\Models\PortageAnswer;
 use App\Models\PortageQuestion;
+use App\Models\TestResult;
 use Illuminate\Http\Request;
 
 class BoxController extends Controller
@@ -214,6 +215,15 @@ class BoxController extends Controller
         foreach ($true as $t) {
             $all = $all + PortageQuestion::where('id', $t->ques_id)->value('ques_mark');
         }
+
+
+        $ans = TestResult::create([
+            'child_id' => $child_id_,
+            'basal' => $rule,
+            'additional' => '0',
+            'dim_id' => 1,
+        ]);
+
 
         return [
             'rule' => $rule,

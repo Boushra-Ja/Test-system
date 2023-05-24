@@ -166,8 +166,99 @@ class AlshatbListSeeder extends Seeder
         /////Box 8
         AlshatbList::create([
             'ques_number' => 7,
-            'question' => '',
-            'box_id' =>  7
+            'question' => 'يكمل نشاطاته عند غياب أحد الوالدين',
+            'box_id' =>  8
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يتنقل في البيئة المحيطة ليستكشفها بنشاط',
+            'box_id' =>  8
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يسحب شخص آخر لمشاهدة بعض الأشياء أو الأعمال',
+            'box_id' =>  8
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يسحب يده يقول لا عند الاقتراب بجوار أشياء ممنوعة عندما يذكر',
+            'box_id' =>  8
+        ]);
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'ينتظر لأن تقضى له احتياجاته المرحاضية عندما يكون موضوعا على كرسي عالي أو طاولة التغيير ',
+            'box_id' =>  8
+        ]);
+
+
+        /////Box 9
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يستمع إلى الموسيقى أو القصصص لمدة 5 - 10 دقائق ',
+            'box_id' =>  9
+        ]);
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يختار عندما يسأل أتريد شرب اللبن أم العصير',
+            'box_id' =>  9
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يهم المشاعر بتعبيره عن الحب، الغضب،الحزن،الضحك ...الخ',
+            'box_id' =>  9
+        ]);
+
+        ////Box 10
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يرقص ويغني مع الإيقاع',
+            'box_id' =>  10
+        ]);
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'يبقى في مكان محدد عندما يطلب منه ذلك',
+            'box_id' =>  10
+        ]);
+
+        ////Box 11
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يطلب المساعدة عند ملاقاة صعوبة (في الحمام أو إحضار شراب)',
+            'box_id' =>  11
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'يعمل وحده في مهمة لمدة 20 - 30 دقيقة',
+            'box_id' =>  11
+        ]);
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => 'يعتذر بدون تذكير 75 % من الوقت',
+            'box_id' =>  11
+        ]);
+        AlshatbList::create([
+            'ques_number' => 20,
+            'question' => 'يتصرف بشكل مناسب عند تواجده في المحيط العام',
+            'box_id' =>  11
+        ]);
+
+
+        ////Box 12
+        AlshatbList::create([
+            'ques_number' => 21,
+            'question' => 'يخبر عن مشاعره الخاصة(غاضب، مبسوط، محب)',
+            'box_id' =>  12
+        ]);
+
+        AlshatbList::create([
+            'ques_number' => 22,
+            'question' => 'يخفف حال أصدقاء اللعب إن كانوا مضطربين',
+            'box_id' =>  12
+        ]);
+        AlshatbList::create([
+            'ques_number' => 23,
+            'question' => 'يختار أصدقاءه',
+            'box_id' =>  12
         ]);
     }
 }

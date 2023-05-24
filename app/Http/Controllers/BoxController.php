@@ -206,29 +206,27 @@ class BoxController extends Controller
     {
         $res = HelpPortege::where('child_id', $child_id_)->first();
 
-        $rule = Box::where('id', $res->true_box_id + 1)->value('mark_age');
+        $rule = ($res->base ==1) ? 0 : Box::where('id', $res->true_box_id + 1)->value('mark_age');
 
         $true = PortageAnswer::where('child_id', $child_id_)->where('ques_mark', 'true')->get();
 
-        $all = $rule * 12;
+        $additional =0;
 
         foreach ($true as $t) {
-            $all = $all + PortageQuestion::where('id', $t->ques_id)->value('ques_mark');
+            $additional = $additional + PortageQuestion::where('id', $t->ques_id)->value('ques_mark');
         }
+
+        $dim=Box::where('id',$res->start)->value('dim_id');
 
 
         $ans = TestResult::create([
             'child_id' => $child_id_,
             'basal' => $rule,
-            'additional' => '0',
-            'dim_id' => 1,
+            'additional' => $additional/12,
+            'dim_id' => $dim,
         ]);
 
+        return $ans;
 
-        return [
-            'rule' => $rule,
-            'all' => $all,
-            'all_y' => $all / 12,
-        ];
     }
 }

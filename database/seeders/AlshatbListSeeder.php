@@ -260,5 +260,96 @@ class AlshatbListSeeder extends Seeder
             'question' => 'يختار أصدقاءه',
             'box_id' =>  12
         ]);
+
+        /////اللعب الاجتماعي
+        ////Box 13
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يلعب لمدة 10 دقائق في مكان آمن وبمراقبة شخص كبير',
+            'box_id' =>  13
+        ]);
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يتحكم باللعب والأدوات مستخدما يديه',
+            'box_id' =>  13
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يقلد حركات طفل آخر',
+            'box_id' =>  13
+        ]);
+
+        ////Box 14
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يلعب بجانب طفل آخر لكن كل منهما يؤدي نشاط مختلف',
+            'box_id' =>  14
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يأخذ دور في لعبة دفع سيارة أو دحرجة كرة مع شخص كبير لمدة من 2 - 5 دقيقة',
+            'box_id' =>  14
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يحضن ويحمل لعبة لينة أو عروسة',
+            'box_id' =>  14
+        ]);
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يعيد الحركات التي تصدر ضحكاً وانتباها',
+            'box_id' =>  14
+        ]);
+
+
+        /////Box 15
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يلعب لعبة ارتداء ملابس الكبار وتقليدهم',
+            'box_id' =>  15
+        ]);
+
+        ////Box 16
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يلعب متبعاً القوانين في ألعاب جماعية مقادة من قبل شخص كبير',
+            'box_id' =>  16
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يلعب قرب أو يتحدث مع الأطفال الآخرين عندما يعمل بمشروعه الخاص لمدة 30 دقيقة',
+            'box_id' =>  16
+        ]);
+
+        /////Box 17
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => '',
+            'box_id' =>  17
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => '',
+            'box_id' =>  17
+        ]);
+
+        /////Box 18
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => '',
+            'box_id' =>  18
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => '',
+            'box_id' =>  18
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => '',
+            'box_id' =>  18
+        ]);
+
+
     }
 }

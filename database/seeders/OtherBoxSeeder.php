@@ -133,7 +133,7 @@ class OtherBoxSeeder extends Seeder
 
 
         ////////البعد المعرفي/////////
-        ///// 19          //////////
+        ///// 19        30  //////////
         //////المهارات الحسية/////
         /////19   -   24  //////
         OtherBox::create([
@@ -212,5 +212,90 @@ class OtherBoxSeeder extends Seeder
             'end_age' =>  72,
             'subTitle_id' => SubTitle::where('title', 'الاستكشاف والتفكير المنطقي والأهداف الرياضية')->value('id'),
         ]);
+
+
+        //////البعد الاتصالي///////
+        ///// 31         42 ///////
+        //////التواصل والللغة ///////
+        ///// 31   -   36/////////
+        OtherBox::create([
+            'id' => 31,
+            'start_age' => 0,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 32,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 33,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 34,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 35,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 36,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'التواصل واللغة')->value('id'),
+        ]);
+
+
+        //////مهارات القراءة المبكرة/////
+        ////// 37    -   42  ///////
+        OtherBox::create([
+            'id' => 37,
+            'start_age' => 0,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 38,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 39,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 40,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 41,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 42,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
+        ]);
+
+
+        //////بعد العناية الذاتية///////
     }
 }

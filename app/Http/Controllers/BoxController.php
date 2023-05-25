@@ -37,6 +37,8 @@ class BoxController extends Controller
 
         return response()->json([
             'question' => $q,
+            'start_age'=>$box->start_age,
+            'end_age'=>$box->end_age,
         ]);
     }
 
@@ -67,6 +69,7 @@ class BoxController extends Controller
 
         $res = HelpPortege::where('child_id', $request->child_id)->first();
 
+
         if ($Q_id == 1 && $res->true == 0) {
             $res->update(
                 [
@@ -79,6 +82,8 @@ class BoxController extends Controller
 
                 return response()->json([
                     'question' => $q,
+                    'start_age'=>$box->start_age,
+                    'end_age'=>$box->end_age,
                 ]);
             } else {
                 $agee = $this->result($request->child_id);
@@ -121,6 +126,8 @@ class BoxController extends Controller
 
                         return response()->json([
                             'question' => $q,
+                            'start_age'=>$box->start_age,
+                            'end_age'=>$box->end_age,
                         ]);
                     } else {
                         $agee = $this->result($request->child_id);
@@ -146,6 +153,8 @@ class BoxController extends Controller
 
                     return response()->json([
                         'question' => $q,
+                        'start_age'=>$box->start_age,
+                        'end_age'=>$box->end_age,
                     ]);
                 }
             }
@@ -169,6 +178,8 @@ class BoxController extends Controller
 
             return response()->json([
                 'question' => $q,
+                'start_age'=>$box->start_age,
+                'end_age'=>$box->end_age,
             ]);
         }
 
@@ -199,6 +210,8 @@ class BoxController extends Controller
 
         return response()->json([
             'question' => $q,
+            'start_age'=>$box->start_age,
+            'end_age'=>$box->end_age,
         ]);
     }
 

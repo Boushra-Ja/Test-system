@@ -36,6 +36,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('show_dimantion', [App\Http\Controllers\PortageDiminssionController::class,'index']);
 
 
-
 });
 

@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\OtherBox;
 use App\Http\Requests\StoreOtherBoxRequest;
 use App\Http\Requests\UpdateOtherBoxRequest;
+use Illuminate\Http\Request;
 
 class OtherBoxController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        
     }
 
     /**

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->integer('mark') ;
+            $table->integer('base') ;
             $table->timestamps();
         });
     }

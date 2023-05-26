@@ -11,18 +11,13 @@ return new class extends Migration
     {
         Schema::create('test_results', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('Basal_Social') ;
-            $table->integer('Total_Social') ;
-            $table->integer('Basal_Motor') ;
-            $table->integer('Total_Motor') ;
-            $table->integer('Basal_Connection') ;
-            $table->integer('Total_Connection') ;
-            $table->integer('Basal_Cognitive') ;
-            $table->integer('Total_Cognitive') ;
-            $table->integer('Basal_Care') ;
-            $table->integer('Total_Care') ;
+            $table->integer('basal') ;
+            $table->integer('additional') ;
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
+            $table->integer('dim_id')->unsigned();
+            $table->foreign('dim_id')->references('id')->on('portage_diminssions')->constrained()->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

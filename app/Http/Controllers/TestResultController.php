@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TestResult;
 use App\Http\Requests\StoreTestResultRequest;
 use App\Http\Requests\UpdateTestResultRequest;
+use App\Http\Resources\Boshra\ReportResource;
 
 class TestResultController extends Controller
 {
@@ -62,5 +63,11 @@ class TestResultController extends Controller
     public function destroy(TestResult $testResult)
     {
         //
+    }
+    public function report($child_id)
+    {
+        $tests  = TestResult::where('child_id' , $child_id)->take(1)->get() ;
+        return response()->json( ReportResource::collection($tests ), 200);
+
     }
 }

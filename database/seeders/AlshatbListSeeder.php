@@ -945,143 +945,424 @@ class AlshatbListSeeder extends Seeder
         /////Box 32
         AlshatbList::create([
             'ques_number' => 28,
-            'question' => '',
+            'question' => 'يعبر عن الملكية بجملة من كلمتين أو بكلمة واحدة(مثال كرة ، كرتي..)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 29,
-            'question' => '',
+            'question' => 'يربط اسم فعل في مقطع مكون من كلمتين(بابا راح)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 30,
-            'question' => '',
+            'question' => 'يستعمل الكلمة التي تعني احتياج الذهاب إلى الحمام',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 31,
-            'question' => '',
+            'question' => 'يتحدث رابطا الاسم أو الفعل مع (هنا ، هناك) في جملة قصيرة من كلمتين مثل (هنا كرسي)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 32,
-            'question' => '',
+            'question' => 'يقول لا يوجد أو ليس في الكلام(فش ، مافي ، مش هيك بالعامية)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 33,
-            'question' => '',
+            'question' => 'يجيب سؤال ماذا يفعل؟ خلال نشاطاته العادية له وللأسرة',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 34,
-            'question' => '',
+            'question' => 'يجيب أسئلة مثل أين أمك؟',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 35,
-            'question' => '',
+            'question' => 'يسمي أصوات مألوفة من البيئة مثل صوت القطة',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 36,
-            'question' => '',
+            'question' => 'يعطي أكثر من شيء واحد عند سؤاله باستعمال سيغة الجمع (مثل مكعبات)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 37,
-            'question' => '',
+            'question' => 'يدل على نفسه باستعمال اسمه في الحديث',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 38,
-            'question' => '',
+            'question' => 'يشير إلى صور لأشياء مألوفة موصوفة باستعمالها(10)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 39,
-            'question' => '',
+            'question' => 'يرفع أصابعه ليقول عمره',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 40,
-            'question' => '',
+            'question' => 'يجيب عندما يسأل عن الجنس(بنت أم ولد)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 41,
-            'question' => '',
+            'question' => 'ينفذ سلسلة من أمرين متقاربين(خذ الكرسي وضعه في الزاوية)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 42,
-            'question' => '',
+            'question' => 'يستعمل الفعل المضارع بطريقة صحيحة',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 43,
-            'question' => '',
+            'question' => 'يستعمل صيغة الحمع(كتاب - كتب)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 44,
-            'question' => '',
+            'question' => 'يستعمل بعض الأفعال الماضية(ذهب ، عمل ، كان)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 45,
-            'question' => '',
+            'question' => 'يسأل سؤال ماهذا...ذاك؟',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 46,
-            'question' => '',
+            'question' => 'يتحكم بارتفاع الصوت 90 % من الوقت',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 47,
-            'question' => '',
+            'question' => 'يستعمل هذا وتلك في الحديث',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 48,
-            'question' => '',
+            'question' => 'يستعمل كلمة هذه في جملة مثل هذه كرة',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 49,
-            'question' => '',
+            'question' => 'يقول أنا بدل اسمه',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 50,
-            'question' => '',
+            'question' => 'يشير إلى أشياء ليست الشيء(ليس المكعب)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 51,
-            'question' => '',
+            'question' => 'يجيب أسئلة من باسم',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 52,
-            'question' => '',
+            'question' => 'يستعمل صيغة الملكية من الاسم(لبابا)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 53,
-            'question' => '',
+            'question' => 'يستعمل ال التعريف أو النكرة في الحديث(الكرة ، كرة)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 54,
-            'question' => '',
+            'question' => 'يستعمل بعض أسماء من المجموعات(اللعب الحيوانات ، الطعام)',
             'box_id' =>  32
         ]);
         AlshatbList::create([
             'ques_number' => 55,
-            'question' => '',
+            'question' => 'يقول أستطيع أو أقدر قبل الفعل أحيانا(أقدر اعمل)',
             'box_id' =>  32
+        ]);
+
+        /////Box 33
+        AlshatbList::create([
+            'ques_number' => 56,
+            'question' => 'يصنف الأشياء إما مفتوحة أو مغلقة',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 57,
+            'question' => 'ينفذ سلسلة من أمرين غير متقاربين(مثال خذ الكوب وأطفئ الضوء)',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 58,
+            'question' => 'يقول الاسم كاملا عندما يطلب منه',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 59,
+            'question' => 'يجيب أسئلة بسيطة تبدأ ب كيف مثل(كيف تصل إلى البقال؟)',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 60,
+            'question' => 'يستعمل صيغة الماضي ',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 61,
+            'question' => 'يخبر عن التجربة الفورية',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 62,
+            'question' => 'يخبر عن كيفية استعمال أدوات معروفة',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 63,
+            'question' => 'يستعمل (سوف ، سوف أذهب ،سوف أعمل، أريد أن ) للتعبير عن الأشياء المقبلة',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 64,
+            'question' => 'يسأل سؤالا استفهاميا بطريقته الخاصة',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 65,
+            'question' => 'يقول بعض صيغ الجمع الشائعة(رجال ، أقدام) بشكل مناسب',
+            'box_id' =>  33
+        ]);
+        AlshatbList::create([
+            'ques_number' => 66,
+            'question' => 'يخبر عن حدثين في نفس ترتيب حدوثهما',
+            'box_id' =>  33
+        ]);
+
+        //////Box 34
+        AlshatbList::create([
+            'ques_number' => 67,
+            'question' => 'ينفذ سلسلة من 3 إشارات',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 68,
+            'question' => 'يخبر عن فهمه للجملة المبنية للمجهول(الولد أكل التفاحة:أُكلت التفاحة)',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 69,
+            'question' => 'يجد زوج من الأدوات ، الصور عند الطلب',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 70,
+            'question' => 'يقول (أستطيع ، أرغب) في الكلام بشكل مناسب',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 71,
+            'question' => 'يقول جمل مترابطة(أنا ضربت الكرة وطارت الى الشارع)',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 72,
+            'question' => 'يجد أعلى وأسفل الأشياء عند الطلب',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 73,
+            'question' => 'يقول جمل منفية: لا أريد ، لا أستطيع ،لن أفعل',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 74,
+            'question' => 'يشير إلى الأخطاء السخيفة في الصورة',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 75,
+            'question' => 'يقول كلمات أخ ، أخت ،جد ، جدة بشكل مناسب',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 76,
+            'question' => 'يقول الكلمة النهائية في التناظر العكسي(مثال تظهر الشمس في الصباح ويظهر القمر في...)',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 77,
+            'question' => 'يسمي الصورة التي لا تنتمي إلى فئة معينة(لا تنتمي إلى فئة الحيوان)',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 78,
+            'question' => 'يقول إن كانت الكلمتين على نفس الوزن والنغمة أم لا',
+            'box_id' =>  34
+        ]);
+        AlshatbList::create([
+            'ques_number' => 79,
+            'question' => 'يخبر إذا كان الصوت عاليا أو خافتا',
+            'box_id' =>  34
+        ]);
+
+        /////Box 35
+        AlshatbList::create([
+            'ques_number' => 80,
+            'question' => 'يشير إلى قليل ، أكثر ، أكثر الجميع',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 81,
+            'question' => 'يقول العنوان',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 82,
+            'question' => 'يقول رقم الهاتف',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 83,
+            'question' => 'يقول نكت بسيطة',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 84,
+            'question' => 'يخبر عن تجاربه اليومية',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 85,
+            'question' => 'يصف طريق الوصول من باب منزله إلى غرفته',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 86,
+            'question' => 'يجيب أسئلة لماذا بتفسير',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 87,
+            'question' => 'يقول معاني الكلمات',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 88,
+            'question' => 'يقول عكس الشيء',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 89,
+            'question' => 'يجيب أسئلة ماذا يحدث إذا مثال(ماذا يحدث إذا سقطت البيضة)',
+            'box_id' =>  35
+        ]);
+        AlshatbList::create([
+            'ques_number' => 90,
+            'question' => 'يتحدث مستعملا كلمة أمس وغدا بطريقة سليمة',
+            'box_id' =>  35
+        ]);
+
+        /////Box 36
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => '',
+            'box_id' =>  36
+        ]);
+
+        ////Box 37
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => '',
+            'box_id' =>  37
+        ]);
+        /////Box 38
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => '',
+            'box_id' =>  38
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => '',
+            'box_id' =>  38
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => '',
+            'box_id' =>  38
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => '',
+            'box_id' =>  38
+        ]);
+
+        /////Box 39
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => '',
+            'box_id' =>  39
+        ]);
+        ////Box 40
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => '',
+            'box_id' =>  40
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => '',
+            'box_id' =>  40
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => '',
+            'box_id' =>  40
+        ]);
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => '',
+            'box_id' =>  40
+        ]);
+
+        ////Box 41
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => '',
+            'box_id' =>  41
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => '',
+            'box_id' =>  41
         ]);
     }
 }

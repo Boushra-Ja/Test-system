@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\TestResultController;
 use App\Mail\NotifyMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
-
+use PHPUnit\Logging\TestDox\TestResultCollector;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +45,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 
 });
+Route::get('report/{id}' , [TestResultController::class , 'report']) ;
 

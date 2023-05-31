@@ -12,9 +12,9 @@ class SubTitleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $sub=SubTitle::where('dim_id',$request->dim_id)->get();
+        $sub=SubTitle::all();
         return response()->json([
             'title' => $sub,
         ]);

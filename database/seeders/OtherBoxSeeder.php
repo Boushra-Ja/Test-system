@@ -569,5 +569,6 @@ class OtherBoxSeeder extends Seeder
 
 
 
+
     }
 }

@@ -1365,5 +1365,912 @@ class AlshatbListSeeder extends Seeder
             'question' => 'يضع من 3-5 أجزاء متسلسلة من قصة ويقولها معا',
             'box_id' =>  42
         ]);
+
+        //Box 43
+
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يرضع',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يفتح الفم لتلقي زجاجه الرضاعة أو الصدر عند ملامسه الحلمه للفم',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يفتح الفم عندما يشاهد ملعقه عليها الطعام',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يأكل طعام ممزوج بسوائل يطعمه اياه أحد الوالدين مثل السيريلاك أو بسكويت ممزوج بالحليب',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يحمل زجاجه الرضاعه أو يمسك الثدي عند الرضاعه بدون أي مساعدة',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6 ,
+            'question' => 'يحمل طعام مهروس يطعم بواسطه أحد الوالدين',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يشرب من كوب يحمله أحد الوالدين',
+            'box_id' =>  43
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يأكل طعام شبه جامد يطعمه اياه أحد الوالدين( موز- بسكويت- عيش)',
+            'box_id' =>  43
+        ]);
+
+        //Box 44
+
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يطعم نفسه بأصابعه',
+            'box_id' =>  44
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يحمل ويشرب من فنجان باستعمل كلتا يديه',
+            'box_id' =>  44
+        ]);
+
+        //Box 45
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'يصب ماء دون مساعدةعند توفر كرسي أو درجات خشبيه له',
+            'box_id' =>  45
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يصب من ابريق صغير في كوب دون مساعده',
+            'box_id' =>  45
+        ]);
+
+        //Box 46
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يأكل الوجبه كلها بنفسه بحسب عادات الأسرة (دون مساعده)',
+            'box_id' =>  46
+        ]);
+        //Box 47
+
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يدهن طعام لين(زبده- حمص -مربى) على قطعه من الخبز',
+            'box_id' =>  47
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يسكب لنفسه الطعام بينما يحمل احد الوالدين الطبق المحتوي على الطعام',
+            'box_id' =>  47
+        ]);
+        //Box 48
+
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'يسكب الطعام بطبقه من طبق السكب ثم يمرر طبق السكب للاخرين',
+            'box_id' =>  48
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يحضر وجبته الخاصه من الحبوب(مثال: وجبه الحبوب مع السوائل- الكعك مع الحليب)',
+            'box_id' =>  48
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'يحضر شطيره(ساندويش لنفسه)',
+            'box_id' =>  48
+        ]);
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => 'يقطع الطعام بسكين امن(مثال: موز -بطاطس مسلوقه- بيض)',
+            'box_id' =>  48
+        ]);
+
+        ///////النظافه والترتيب والصحه العامه////
+        /// Box 49
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => '  يجلس على القصريه(النونيه)أو على مقعد المرحاض الخاص للأطفال لمده 5 دقائق  ',
+            'box_id' =>  49
+        ]);
+        /// Box 50
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يقول كلمات أو يشير الى احتياجه للذهاب الى المرحاض',
+            'box_id' =>  50
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يمضغ ويبلع المواد الصالحه للأكل فقط ',
+            'box_id' =>  50
+        ]);
+        /// Box 51
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يمسح يديه ووجهه بالمنشفه بعد أن يأخذها من أحد الوالدين',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يذهب الى المرحاض بعد حركه الأمعاء حادث واحد خلال النهار /خلال أسبوع ممسموح',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يغسل يده ووجهه مستعملا الصابون عندما يوازن  له شخص كبير درجه حراره الماء',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يعلق البالطو على علاقه بطوله',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'ينام دون أن يبلل نفسه(حلال النوم القصير)',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'ينظف فمه عند الحاجه أثناء تناول الطعام',
+            'box_id' =>  51
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يغسل يديه ورجليه بنفسه عندما يحمم',
+            'box_id' =>  51
+        ]);
+        /// Box 52
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'يمسح أنفه عندما يذكر',
+            'box_id' =>  52
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يبتعد عن الأخطار العاديه(الزجاج المكسور)',
+            'box_id' =>  52
+        ]);
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يستيقظ ليلا لاستعمال المرحاض أو يبقى جافا طوال الليل',
+            'box_id' =>  52
+        ]);
+        /// Box 53
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'ينظف ما سكب بجاب ممسحه أو اسفنج',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يبتعد عن السموم والمواد الضاره كواد التنظيف',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'ينقل أدواته عن المائده بعد تناول الطعام',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يغسل اليدين والوجه',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'ينظف(يمخط أنفه)75% من الوقت عندما يحتاج دون تذكير',
+            'box_id' =>  53
+        ]);
+
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => '  يغتسل(يستحم) بنفسه عدا الظهر الرقبه الاذنين',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 20,
+            'question' => 'يساعد والدته في اعداد سفره الطعام بالطريقه التي تتناسب مع عادات الاسره في تناول الطعام(بعد اعطائه التعليمات اللغويه)',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create
+        ([
+            'ques_number' => 21,
+            'question' => 'ينظف أسنانه',
+            'box_id' =>  53
+        ]);
+        AlshatbList::create([
+            'ques_number' => 22,
+            'question' => 'يذهب للمرحاض في الميعاد يخلع ملابسه يمسح يفتح السيفون ويلبس دون أي مساعده ',
+            'box_id' =>  53
+        ]);
+        /// Box 54
+        AlshatbList::create([
+            'ques_number' => 23,
+            'question' => 'ينفذ مهمه أسبوعيه واحده عند الطلب (مسئول عندها كليا)',
+            'box_id' =>  54
+        ]);
+        AlshatbList::create([
+            'ques_number' => 24,
+            'question' => 'ينفذ مهمه منزليه يوميه مسئول عنها(تحضير المائده- القاء القمامه)',
+            'box_id' =>  54
+        ]);
+        ///الارتداء///
+        /// Box 55
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يخلع الجوارب',
+            'box_id' =>  55
+        ]);
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يعد الذراعين داخل كم القميص والرجلين داخل كم البنطلون',
+            'box_id' =>  55
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يخلع الحذاء عندما يكون الرباط غير مربوط أو مرخي',
+            'box_id' =>  56
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يخلع الجاكيت عندما يكون مفكوكا',
+            'box_id' =>  56
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يخلع البنطلون عندما يكون مفكوكا',
+            'box_id' =>  56
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يقفل أو يفتح سحاب كبير ولكن لا يركب طرفيه',
+            'box_id' =>  56
+        ]);
+        /// Box 57
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يلبس حذائه(دون ربط الرباط)',
+            'box_id' =>  57
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يخلع ملابسه ال الخلع بعد فكها',
+            'box_id' =>  57
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يفك كبسونه الملابس',
+            'box_id' =>  57
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يلبس جواربه',
+            'box_id' =>  57
+        ]);
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'يلبس قميصه- جاكيته-أو البالطو الخاص به',
+            'box_id' =>  57
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يقلب الملابس على وجهها',
+            'box_id' =>  57
+        ]);
+        /// Box 58
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يلبس بنفسه مع مساعده عند لبس ما يحتاج لتزرير',
+            'box_id' =>  58
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يقفل كبسونات الملابس',
+            'box_id' =>  58
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يعلق البالطو على علاقه وضعتعلى قضيب منخفض مع اعطاء التعليمات',
+            'box_id' =>  58
+        ]);
+        /// Box 59
+
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'يفك ويزرر ملابسه',
+            'box_id' =>  59
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يركب طرفي السحاب معا',
+            'box_id' =>  59
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'يربط ويفك الحزام ذو ابزيم من على الفستان - بنطلون أو حذاء',
+            'box_id' =>  59
+        ]);
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => 'يلبس بنفسه كليا اضافه الى تزرير كل الأزرار الأماميه عند الربط',
+            'box_id' =>  59
+        ]);
+        AlshatbList::create([
+            'ques_number' => 20,
+            'question' => 'يعلق الملابس على العلاقه',
+            'box_id' =>  59
+        ]);
+        AlshatbList::create([
+            'ques_number' => 21,
+            'question' => 'يربط حذاءه',
+            'box_id' =>  59
+        ]);
+        /// Box 60
+
+        AlshatbList::create([
+            'ques_number' => 22,
+            'question' => 'يختار ملابس مناسبه لدرجه الحراره والمناسبات',
+            'box_id' =>  60
+        ]);
+        //////المهارات الحركية الكبيرة والتوازن////
+        ////  Box 61////
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يحرك الرأس الى الجانب بينما يكون مستلقيا على ظهره',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يرفع رأسه من على الكتف ويحافظ على زضعه للحظات بينما يكون الطفل محمولا ورأسه على كتف من يحمله',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يحرك الذراعين حوله بدون اتجاه معين',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يرفس بعنف عندما يكون مستلقيا على ظهره',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يرفع رأسه ويحافظ على وضعه لمده 5 ثوان بينما يكون الطفل على بطنه',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يجلس  متحكما بالرأس والكتفين وهو مسنود بوساده',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يرفع رأسه بثبات عندما يكون محمولا بوضع عامودي',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يتدحرج باستعمال الكتفين',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يستلقي على بطنه مسندا ؤأسه وصدره على ذراعيه',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يقلب وهو مستلق على بطنه الى جانبه ومن ثم الى بطنه',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'يحرك رأسه بحريه وجسمه مسنودا',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يقلب وهو مستلق على ظهره الى جانبه ومن ثم الى بطنه',
+            'box_id' =>  61
+        ]);
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يهز نفسه الى أعلى و أسفل في وضع الوقوف مسنودا',
+            'box_id' =>  61
+        ]);
+        ////  Box 62////
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يزحف بقدر طول جسمه ليحصل على الأداه',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يجلس  دون اسناد',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'يتأرجح الى الخلف والأمام على يديه وركبتيه',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يسحب نفسه الى وضع على ركبتيه',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'يسحب نفسه الى وضع الوقوف',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => 'يقف وحده لمده دقيقه',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 20,
+            'question' => '  يفحص نفسه ليتخذ وضع الجلوس بعد أن كان واقفا',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 21,
+            'question' => 'يخطو بضعه خطوات دون مسانده',
+            'box_id' =>  62
+        ]);
+        AlshatbList::create([
+            'ques_number' => 22,
+            'question' => 'يزحف الى أعلى الدرج',
+            'box_id' =>  62
+        ]);
+        //Box 63///
+        AlshatbList::create([
+            'ques_number' => 23,
+            'question' => 'يتسلق على كرسي الكبار يدير نفسه ويجلس',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 24,
+            'question' => 'يمشي لوحده بدون مساعده',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 25,
+            'question' => 'يجلس بنفسه على كرسي صغير',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 26,
+            'question' => 'يقرفص ثم ينهض',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 27,
+            'question' => 'يدفع ويسحب اللعب وهو يمشي',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 28,
+            'question' => 'ينحني من الوسط ليلتقط الأدوات دون أن يقع ',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 29,
+            'question' => 'يقفز في مكانه بكلتا قدميه',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 30,
+            'question' => 'يمشي للخلف',
+            'box_id' =>  63
+        ]);
+        AlshatbList::create([
+            'ques_number' => 31,
+            'question' => 'يرمي كره الى شخص كبير على بعد متر ونصف دون أن يحرك هذا الشخص قدميه',
+            'box_id' =>  63
+        ]);
+        //Box 64///
+        AlshatbList::create([
+            'ques_number' => 32,
+            'question' => 'يرمي كره كبيره وثابته بقدمه',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 33,
+            'question' => 'يصعد وينزل الدرج بتبادل القدمين عندما يستعين بالدرابزين أو يسعده أحد',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 34,
+            'question' => 'يتشقلب الى الأمام بمساعده',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 35,
+            'question' => 'يقفز من ارتفاع 20 سم',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 36,
+            'question' => 'يضرب بفدمه كره كبيره مدحرجه اليه',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 37,
+            'question' => 'يتأرجح على أرجوحه بعد أن يدفعه أحد في البدايه',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 38,
+            'question' => 'يتشقلب الى الأمام',
+            'box_id' =>  64
+        ]);
+        AlshatbList::create([
+            'ques_number' => 39,
+            'question' => 'يمسك كره مقذوفه اليه بكلتا يديه',
+            'box_id' =>  64
+        ]);
+
+        //Box 65///
+        AlshatbList::create([
+            'ques_number' => 40,
+            'question' => 'يقف على قدم واحده لمدخ 4-8 ثوان دون مساعده',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 41,
+            'question' => 'يجري مغيرا اتجاهه',
+            'box_id' =>  65
+        ]);
+
+        AlshatbList::create([
+            'ques_number' => 42,
+            'question' => 'يمشي على خشبه التوازن',
+            'box_id' =>  65
+        ]);
+
+        AlshatbList::create([
+            'ques_number' => 43,
+            'question' => 'يقفز الى الأمام 10 مرات دون أن يقع(2-3 توازن)',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 44,
+            'question' => 'يقفز على جبل يرتفع 5 سم عن الأرض',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 45,
+            'question' => 'يضرب كره كبيره على الأرض ويلتقطها',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 46,
+            'question' => 'يتسلق سلم انزلاق ارتفاعه 2م لينزلق من أعلى زلاقه(سحسليه)',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 47,
+            'question' => 'يمسك كره لينه أو كيس فاصوليابيد واحده(بعد أن يكون شخص قد رماه باتجاهه)',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 48,
+            'question' => 'يلتقط أداه من الأرض وهو يجري',
+            'box_id' =>  65
+        ]);
+        AlshatbList::create([
+            'ques_number' => 49,
+            'question' => 'يقفز ثم يدور على قدم واحده',
+            'box_id' =>  65
+        ]);
+        //Box 66
+        AlshatbList::create([
+            'ques_number' => 50,
+            'question' => 'يقف على قدم واحده دون مسانده وعينيه مغلقتين لمده 10 ثوان',
+            'box_id' =>  66
+        ]);
+        ////المهارات الحركية الدقيقة///
+       //// Box 67
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يضرب بعنف على أداه',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يمد يده نحو الأشياء محاولا المساك بها',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يمسك الطفل أدوات باستعمال الكف لمده 30 ثانيه ويسقطها بدون قصد',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يمد يده ويمسك أداه أمامه',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يترك الأدوات التي في يده عن قصد ليمد يده الى أداه أخرى',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يلتقط ويسقط أدوات عن قصد',
+            'box_id' =>  67
+        ]);AlshatbList::create([
+        'ques_number' => 7,
+        'question' => 'يرمي الأدوات بصوره اعتباطيه',
+        'box_id' =>  67
+    ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'ينقل أداه من يد الى اليد الأخرى وهو في وضع الجلوس',
+            'box_id' =>  67
+        ]);AlshatbList::create([
+        'ques_number' => 9,
+        'question' => 'يحتفظ بمكعبين حجم كل منهم 2ز5سم 3 بيد واحده',
+        'box_id' =>  67
+    ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' =>  'يمسك بأداه بالسبابه والابهام على طريقه الكماشه',
+            'box_id' =>  67
+        ]);
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'يتحكم باللعاب السائل',
+            'box_id' =>  67
+        ]);
+        //// Box 68
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يلحس الطعام من حول فمه',
+            'box_id' =>  68
+        ]);
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يغرف بالمعلقه أو المغرفه',
+            'box_id' =>  68
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يصفق بكلتا يديه',
+            'box_id' =>  68
+        ]);
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يدحدر كره بالتقليد',
+            'box_id' =>  68
+        ]);
+        //// Box 69
+        AlshatbList::create([
+            'ques_number' => 16,
+            'question' => 'يضع أربع خرزات كبيره في خيط خلال دقيقتين',
+            'box_id' =>  69
+        ]);
+        AlshatbList::create([
+            'ques_number' => 17,
+            'question' => 'يدير يد الباب',
+            'box_id' =>  69
+        ]);
+        AlshatbList::create([
+            'ques_number' => 18,
+            'question' => 'يقلب صفحات من كتاب صفحه صفحه',
+            'box_id' =>  69
+        ]);
+        AlshatbList::create([
+            'ques_number' => 19,
+            'question' => 'يفك أداه صغيره ملفوفه',
+            'box_id' =>  69
+        ]);
+        AlshatbList::create([
+            'ques_number' => 20,
+            'question' => 'يطوي ورقه من النصف بالتقليد',
+            'box_id' =>  69
+        ]);
+        AlshatbList::create([
+            'ques_number' => 21,
+            'question' => 'يفك لعبا ذات أسنان',
+            'box_id' =>  69
+        ]);
+
+        //// Box 70
+        AlshatbList::create([
+            'ques_number' => 22,
+            'question' => 'يشكل كرات من الصلصل (المعجون)',
+            'box_id' =>  70
+        ]);
+        AlshatbList::create([
+            'ques_number' => 23,
+            'question' => '  يدق بالشاكوش(المطرقه) ويصيب 5 أوتاد',
+            'box_id' =>  70
+        ]);
+        AlshatbList::create([
+            'ques_number' => 24,
+            'question' => 'يقص بالمقص',
+            'box_id' =>  70
+        ]);
+        AlshatbList::create([
+            'ques_number' => 25,
+            'question' => 'يتبع هيكل الشكل ',
+            'box_id' =>  70
+        ]);
+        AlshatbList::create([
+            'ques_number' => 26,
+            'question' => 'يقص خيط مستقيم طوله 12 سم دون أن ينحرف عليه أكثر من 1 سم',
+            'box_id' =>  70
+        ]);
+        AlshatbList::create([
+            'ques_number' => 27,
+            'question' => 'يشكل قطعتين أو ثلاث من الطين ويركبها معا',
+            'box_id' =>  70
+        ]);
+        //// Box 71
+        AlshatbList::create([
+            'ques_number' => 28,
+            'question' => 'يقص على خيط منحني',
+            'box_id' =>  71
+        ]);
+        AlshatbList::create([
+            'ques_number' => 29,
+            'question' => 'يرركب أداه دات أسنان',
+            'box_id' =>  71
+        ]);
+        AlshatbList::create([
+            'ques_number' => 30,
+            'question' => 'يقص دائره قطرها 5 سم ',
+            'box_id' =>  71
+        ]);
+        AlshatbList::create([
+            'ques_number' => 31,
+            'question' => 'يرسم صورا بسيطه من الممكن التعرف عليها مثل(بيت - رجل -شجره)',
+            'box_id' =>  71
+        ]);
+        AlshatbList::create([
+            'ques_number' => 32,
+            'question' => 'يقص ويلصق أشكال بسيطه ',
+            'box_id' =>  71
+        ]);
+        //// Box 72
+        AlshatbList::create([
+            'ques_number' => 33,
+            'question' => 'يلبس بابهامه كل أصبع بعد فردها',
+            'box_id' =>  72
+        ]);
+        AlshatbList::create([
+            'ques_number' => 34,
+            'question' => 'يقص صوره من مجله كتالوج بدون أن ينحرف عن طرف الصوره أكثر من 1 سم',
+            'box_id' =>  72
+        ]);
+        AlshatbList::create([
+            'ques_number' => 35,
+            'question' => 'يبري قلم الرصاص بالمبراه',
+            'box_id' =>  72
+        ]);
+        AlshatbList::create([
+            'ques_number' => 36,
+            'question' => 'يمزق أشكال بسيطه من ورق',
+            'box_id' =>  72
+        ]);
+        AlshatbList::create([
+            'ques_number' => 37,
+            'question' => 'يثني  مربع من ورق مرتين على القطر بالتقليد ',
+            'box_id' =>  72
+        ]);
+        //// Box 73
+         /////مهارات ماقبل الكتابة والكتابة المبكرة///
+        AlshatbList::create([
+            'ques_number' => 1,
+            'question' => 'يحرك البهام مقابل الأصابع الأربعه الأخرى',
+            'box_id' =>  73
+        ]);
+        //// Box 74
+        AlshatbList::create([
+            'ques_number' => 2,
+            'question' => 'يخربش',
+            'box_id' =>  74
+        ]);
+        //// Box 75
+        AlshatbList::create([
+            'ques_number' => 3,
+            'question' => 'يرسم خطا عموديا مقلدا',
+            'box_id' =>  75
+        ]);
+        AlshatbList::create([
+            'ques_number' => 4,
+            'question' => 'يرسم خطا افقيا مقلدا',
+            'box_id' =>  75
+        ]);
+        AlshatbList::create([
+            'ques_number' => 5,
+            'question' => 'يرسم دائره مقلدا',
+            'box_id' =>  75
+        ]);
+        //// Box 76
+        AlshatbList::create([
+            'ques_number' => 6,
+            'question' => 'يمسك القلم بالسبابه والابهام مستندا على الأصبع الوسطي',
+            'box_id' =>  76
+        ]);
+        AlshatbList::create([
+            'ques_number' => 7,
+            'question' => 'يرسم علامه + مقلدا',
+            'box_id' =>  76
+        ]);
+        AlshatbList::create([
+            'ques_number' => 8,
+            'question' => 'يرسم شكل 7 مقلدا',
+            'box_id' =>  76
+        ]);
+        AlshatbList::create([
+            'ques_number' => 9,
+            'question' => 'يرسم خط قطري من زاويه مربع الى الزاويه الأخرى',
+            'box_id' =>  76
+        ]);
+        AlshatbList::create([
+            'ques_number' => 10,
+            'question' => 'يرسم مربعا بالتقليد',
+            'box_id' =>  76
+        ]);
+        ///Box 77
+        AlshatbList::create([
+            'ques_number' => 11,
+            'question' => 'ينسخ مثلث عند الطلب ',
+            'box_id' =>  77
+        ]);
+        AlshatbList::create([
+            'ques_number' => 12,
+            'question' => 'يرسم رجل (راس- وسط - أربعه أطراف)',
+            'box_id' =>  77
+        ]);
+        ///Box 78
+
+        AlshatbList::create([
+            'ques_number' => 13,
+            'question' => 'يلون مع بقائه داخل الخطوط 95% من الوقت ',
+            'box_id' =>  78
+        ]);
+        AlshatbList::create([
+            'ques_number' => 14,
+            'question' => 'يكتب اسمه اول',
+            'box_id' =>  78
+        ]);
+
+        AlshatbList::create([
+            'ques_number' => 15,
+            'question' => 'يرسم المعين مقلدا ',
+            'box_id' =>  78
+        ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

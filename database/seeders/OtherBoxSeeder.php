@@ -295,7 +295,279 @@ class OtherBoxSeeder extends Seeder
             'subTitle_id' => SubTitle::where('title', 'مهارات القراءة المبكرة')->value('id'),
         ]);
 
-
         //////بعد العناية الذاتية///////
+        /// التغذيه//////////
+        /// 43----48//
+        OtherBox::create([
+            'id' => 43,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 44,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 45,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 46,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 47,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 48,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
+        ]);
+        /////////النظافه والترتيب والصحه العامه///
+        /// 49 ---- 54//
+        OtherBox::create([
+            'id' => 49,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+
+        OtherBox::create([
+            'id' => 50,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 51,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 52,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 53,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 54,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+        ]);
+
+        ////ارتداء الملابس///
+        /// 55 --- 60///
+        OtherBox::create([
+            'id' => 55,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 56,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 57,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 58,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 59,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 60,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
+        ]);
+        //////المهارات الحركية الكبيرة والتوازن////
+        /// 61---66////
+        OtherBox::create([
+            'id' => 61,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 62,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 63,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 64,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 65,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 66,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
+        ]);
+        ////المهارات الحركية الدقيقة///
+        /// 67-------72
+        OtherBox::create([
+            'id' => 67,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 68,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 69,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 70,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 71,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 72,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+
+        /////مهارات ما قبل  الكتابه والكتابه المبكره ////
+        /// 73 ----78///
+        OtherBox::create([
+            'id' => 73,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 74,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 75,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 76,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 77,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 78,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
+        ]);
+
+        /////مهارات ماقبل الكتابة والكتابة المبكرة///
+        /// 79----84
+        OtherBox::create([
+            'id' => 79,
+            'start_age' => 1,
+            'end_age' =>  12,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 80,
+            'start_age' => 12,
+            'end_age' =>  24,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 81,
+            'start_age' => 24,
+            'end_age' =>  36,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 82,
+            'start_age' => 36,
+            'end_age' =>  48,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 83,
+            'start_age' => 48,
+            'end_age' =>  60,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+        OtherBox::create([
+            'id' => 84,
+            'start_age' => 60,
+            'end_age' =>  72,
+            'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
+        ]);
+
+
+
     }
 }

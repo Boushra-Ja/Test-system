@@ -2256,6 +2256,7 @@ class AlshatbListSeeder extends Seeder
             'ques_number' => 15,
             'question' => 'يرسم المعين مقلدا ',
             'box_id' =>  78
+
         ]);
 
 

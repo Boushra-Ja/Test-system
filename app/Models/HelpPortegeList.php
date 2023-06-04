@@ -5,13 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AlshatbListAnswer extends Model
+class HelpPortegeList extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'ques_id',
+        'start',
+        'true',
+        'false',
         'child_id',
-        'answer'
+        'true_box_id',
+        'false_box_id',
 
     ];
 }

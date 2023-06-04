@@ -36,6 +36,7 @@ class BoxController extends Controller
         ]);
 
         return response()->json([
+            'result' => 'not end',
             'question' => $q,
             'start_age'=>$box->start_age,
             'end_age'=>$box->end_age,
@@ -81,6 +82,7 @@ class BoxController extends Controller
                 $q = PortageQuestion::where('box_id', $box->id)->get();
 
                 return response()->json([
+                    'result' => 'not end',
                     'question' => $q,
                     'start_age'=>$box->start_age,
                     'end_age'=>$box->end_age,
@@ -125,6 +127,7 @@ class BoxController extends Controller
                         $q = PortageQuestion::where('box_id', $box->id)->get();
 
                         return response()->json([
+                            'result' => 'not end',
                             'question' => $q,
                             'start_age'=>$box->start_age,
                             'end_age'=>$box->end_age,
@@ -152,6 +155,7 @@ class BoxController extends Controller
                     $q = PortageQuestion::where('box_id', $box->id)->get();
 
                     return response()->json([
+                        'result' => 'not end',
                         'question' => $q,
                         'start_age'=>$box->start_age,
                         'end_age'=>$box->end_age,
@@ -177,6 +181,7 @@ class BoxController extends Controller
             $q = PortageQuestion::where('box_id', $box->id)->get();
 
             return response()->json([
+                'result' => 'not end',
                 'question' => $q,
                 'start_age'=>$box->start_age,
                 'end_age'=>$box->end_age,
@@ -209,6 +214,7 @@ class BoxController extends Controller
         $q = PortageQuestion::where('box_id', $box->id)->get();
 
         return response()->json([
+            'result' => 'not end',
             'question' => $q,
             'start_age'=>$box->start_age,
             'end_age'=>$box->end_age,

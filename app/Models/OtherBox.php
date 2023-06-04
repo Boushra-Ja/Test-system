@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class OtherBox extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'start_age',
+        'end_age',
+        'subTitle_id',
+   ];
+
 }

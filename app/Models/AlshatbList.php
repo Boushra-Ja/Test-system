@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class AlshatbList extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'ques_number',
+        'question',
+        'box_id',
+    ];
 }

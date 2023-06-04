@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SubTitle extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'dim_id',
+   ];
 }

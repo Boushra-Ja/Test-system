@@ -2,22 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SubTitle;
-use App\Http\Requests\StoreSubTitleRequest;
-use App\Http\Requests\UpdateSubTitleRequest;
-use Illuminate\Http\Request;
+use App\Models\HelpPortegeList;
+use App\Http\Requests\StoreHelpPortegeListRequest;
+use App\Http\Requests\UpdateHelpPortegeListRequest;
 
-class SubTitleController extends Controller
+class HelpPortegeListController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $sub=SubTitle::all();
-        return response()->json([
-            'title' => $sub,
-        ]);
+        //
     }
 
     /**
@@ -31,7 +27,7 @@ class SubTitleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSubTitleRequest $request)
+    public function store(StoreHelpPortegeListRequest $request)
     {
         //
     }
@@ -39,7 +35,7 @@ class SubTitleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SubTitle $subTitle)
+    public function show(HelpPortegeList $helpPortegeList)
     {
         //
     }
@@ -47,7 +43,7 @@ class SubTitleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SubTitle $subTitle)
+    public function edit(HelpPortegeList $helpPortegeList)
     {
         //
     }
@@ -55,7 +51,7 @@ class SubTitleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSubTitleRequest $request, SubTitle $subTitle)
+    public function update(UpdateHelpPortegeListRequest $request, HelpPortegeList $helpPortegeList)
     {
         //
     }
@@ -63,7 +59,7 @@ class SubTitleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SubTitle $subTitle)
+    public function destroy(HelpPortegeList $helpPortegeList)
     {
         //
     }

@@ -40,6 +40,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('sub_title', [App\Http\Controllers\SubTitleController::class,'index']);
     Route::post('first_box_list', [App\Http\Controllers\OtherBoxController::class,'first_box_list']);
     Route::post('store_list', [App\Http\Controllers\OtherBoxController::class,'stor']);
+    Route::post('plan', [App\Http\Controllers\OtherBoxController::class,'stor']);
+
+
 
 
 

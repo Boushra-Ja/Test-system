@@ -340,38 +340,38 @@ class OtherBoxSeeder extends Seeder
             'id' => 49,
             'start_age' => 1,
             'end_age' =>  12,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
 
         OtherBox::create([
             'id' => 50,
             'start_age' => 12,
             'end_age' =>  24,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
         OtherBox::create([
             'id' => 51,
             'start_age' => 24,
             'end_age' =>  36,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
         OtherBox::create([
             'id' => 52,
             'start_age' => 36,
             'end_age' =>  48,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
         OtherBox::create([
             'id' => 53,
             'start_age' => 48,
             'end_age' =>  60,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
         OtherBox::create([
             'id' => 54,
             'start_age' => 60,
             'end_age' =>  72,
-            'subTitle_id' => SubTitle::where('title', 'النظافه والترتيب والصحه العامه')->value('id'),
+            'subTitle_id' => SubTitle::where('title', 'النظافة والترتيب والصحة العامة')->value('id'),
         ]);
 
         ////ارتداء الملابس///

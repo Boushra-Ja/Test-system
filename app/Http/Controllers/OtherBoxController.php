@@ -18,7 +18,8 @@ class OtherBoxController extends Controller
     public function first_box_list(Request $request)
     {
         $res=TestResult::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
-        $age=$res->basal*12+$res->additional;
+        if($res){
+            $age=$res->basal*12+$res->additional;
         $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $age)->where('end_age', '>=', $age)->first();
        // $q=AlshatbList::where('box_id','>=',$box->id)->where('box_id','<=',$box_end->id)->get();
        $q=AlshatbList::where('box_id',$box->id)->first();
@@ -35,13 +36,22 @@ class OtherBoxController extends Controller
         ]);
 
         return response()->json([
-            'question' => $q
+            'question' => $q,
+            'result'=>'true'
         ]);
+
+        }
+        else
+            return response()->json([
+                'result'=>'false'
+
+            ]);
+
+
     }
 
     public function stor(Request $request)
     {
-
 
         if($request->answer =='false')
             $ans = AlshatbListAnswer::create([
@@ -49,8 +59,10 @@ class OtherBoxController extends Controller
                 'child_id' => $request->child_id,
                 'answer' => '0',
             ]);
+
         $res=HelpPortegeList::where('child_id',$request->child_id)->first();
 
+        // first answer false
 
         if($request->ques_id == $res->start && $request->answer == 'false'){
             $res->update([
@@ -211,8 +223,14 @@ class OtherBoxController extends Controller
 
 
 
+        
 
 
+    }
+
+    public function plan(Request $request){
+
+        $res=AlshatbListAnswer::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
     }
 
 }

@@ -15,11 +15,8 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('start') ;
             $table->integer('true') ;
-            $table->integer('false') ;
-            $table->integer('true_box_id')->unsigned();
-            $table->foreign('true_box_id')->references('id')->on('boxes')->constrained()->onDelete('cascade');
-            $table->integer('false_box_id')->unsigned();
-            $table->foreign('false_box_id')->references('id')->on('boxes')->constrained()->onDelete('cascade');
+            $table->integer('true_q_id');
+            $table->integer('end');
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->timestamps();

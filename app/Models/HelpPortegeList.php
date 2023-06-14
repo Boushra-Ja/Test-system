@@ -11,10 +11,9 @@ class HelpPortegeList extends Model
     protected $fillable = [
         'start',
         'true',
-        'false',
         'child_id',
-        'true_box_id',
-        'false_box_id',
+        'true_q_id',
+        'end',
 
     ];
 }

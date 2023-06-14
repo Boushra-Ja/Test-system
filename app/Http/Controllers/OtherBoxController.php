@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Bayan\Alshatb_result;
 use App\Models\Child;
 use App\Models\OtherBox;
 use App\Http\Requests\StoreOtherBoxRequest;
@@ -9,6 +10,7 @@ use App\Http\Requests\UpdateOtherBoxRequest;
 use App\Models\AlshatbList;
 use App\Models\AlshatbListAnswer;
 use App\Models\HelpPortegeList;
+use App\Models\ResultList;
 use App\Models\TestResult;
 use Illuminate\Http\Request;
 
@@ -41,6 +43,11 @@ class OtherBoxController extends Controller
             'child_id' => $request->child_id,
         ]);
 
+        $res1 = ResultList::create([
+            'sub_id' => $request->subTitle_id,
+            'child_id'=>$request->child_id
+        ]);
+
         return response()->json([
             'question' => $q,
             'result'=>'true'
@@ -59,12 +66,16 @@ class OtherBoxController extends Controller
     public function stor(Request $request)
     {
 
-        if($request->answer =='false')
+        if($request->answer =='false'){
+
+            $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->latest('created_at')->first();
             $ans = AlshatbListAnswer::create([
                 'ques_id' => $request->ques_id,
-                'child_id' => $request->child_id,
-                'answer' => '0',
+                'result_id'=>$result->id
             ]);
+
+        }
+
 
         $res=HelpPortegeList::where('child_id',$request->child_id)->first();
 
@@ -164,7 +175,12 @@ class OtherBoxController extends Controller
 
     public function plan(Request $request){
 
-        $res=AlshatbListAnswer::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
+        $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->latest('created_at')->first();
+        $res=AlshatbListAnswer::where('result_id',$result->id)->get();
+        $q=Alshatb_result::collection($res );
+        return response()->json([
+            'result' => $q,
+        ]);
     }
 
 

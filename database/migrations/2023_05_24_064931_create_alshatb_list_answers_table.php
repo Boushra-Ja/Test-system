@@ -11,11 +11,10 @@ return new class extends Migration
     {
         Schema::create('alshatb_list_answers', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('answer') ;
             $table->integer('ques_id')->unsigned();
             $table->foreign('ques_id')->references('id')->on('alshatb_lists')->constrained()->onDelete('cascade');
-            $table->integer('child_id')->unsigned();
-            $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
+           
+
             $table->timestamps();
         });
     }

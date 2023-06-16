@@ -36,10 +36,12 @@ class OtherBoxController extends Controller
 
 
          $ans = HelpPortegeList::create([
-            'start' => $q->id,
+            // 'start' => $q->id,
+            'start' => $q->ques_number,
             'true' => '0',
             'true_q_id' => '1',
-            'end' =>$q_end,
+            // 'end' =>$q_end,
+             'end' =>AlshatbList::where('id',$q_end)->value('ques_number'),
             'child_id' => $request->child_id,
         ]);
 
@@ -70,7 +72,8 @@ class OtherBoxController extends Controller
 
             $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->latest('created_at')->first();
             $ans = AlshatbListAnswer::create([
-                'ques_id' => $request->ques_id,
+                // 'ques_id' => $request->ques_id,
+                'ques_id' => AlshatbList::where('ques_number',$request->ques_id)->where('box_id',$request->box_id)->value('id'),
                 'result_id'=>$result->id
             ]);
 
@@ -81,7 +84,9 @@ class OtherBoxController extends Controller
 
 
         if($res->true != '4'){
-            if($request->ques_id-1!= '0' || $request->ques_id-1!= '20' || $request->ques_id-1!= '43' || $request->ques_id-1!= '58' || $request->ques_id-1!= '112' || $request->ques_id-1!= '142' || $request->ques_id-1!= '232' || $request->ques_id-1!= '250' || $request->ques_id-1!= '269' || $request->ques_id-1!= '293' || $request->ques_id-1!= '315' || $request->ques_id-1!= '365' || $request->ques_id-1!= '402'){
+            // if($request->ques_id-1!= '0' || $request->ques_id-1!= '20' || $request->ques_id-1!= '43' || $request->ques_id-1!= '58' || $request->ques_id-1!= '112' || $request->ques_id-1!= '142' || $request->ques_id-1!= '232' || $request->ques_id-1!= '250' || $request->ques_id-1!= '269' || $request->ques_id-1!= '293' || $request->ques_id-1!= '315' || $request->ques_id-1!= '365' || $request->ques_id-1!= '402'){
+                if($request->ques_id-1!= '0' ){
+
                 if($request->answer == 'true' && $res->true_q_id == ($request->ques_id+1)){
                     $t=$res->true+1;
                     $res->update([
@@ -89,7 +94,7 @@ class OtherBoxController extends Controller
                             'true_q_id' => $request->ques_id,
                         ]);
                     if($t==4 && $res->end!=$res->start){
-                        $q=AlshatbList::where('id',$res->start+1)->first();
+                        $q=AlshatbList::where('ques_number',$res->start+1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
                         return response()->json([
                             'question' => $q,
                             'end' => 'false',
@@ -101,14 +106,17 @@ class OtherBoxController extends Controller
                         ]);
                     }
                     else{
-                        $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                        // $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                        $q=AlshatbList::where('ques_number',$request->ques_id-1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
                         return response()->json([
                             'question' => $q,
                             'end' => 'false',
                         ]);
                     }
                 }else if($request->answer == 'true' && $res->true_q_id != ($request->ques_id+1)){
-                    $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                    // $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                    $q=AlshatbList::where('ques_number',$request->ques_id-1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
+
                         $res->update([
                             'true' => '1',
                             'true_q_id' => $request->ques_id,
@@ -119,7 +127,9 @@ class OtherBoxController extends Controller
                     ]);
 
                 }else{
-                    $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                    // $q=AlshatbList::where('id',$request->ques_id-1)->first();
+                    $q=AlshatbList::where('ques_number',$request->ques_id-1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
+
                         $res->update([
                             'true' => '0',
                             'true_q_id' => '1',
@@ -134,7 +144,7 @@ class OtherBoxController extends Controller
                         'true' => '4',
                     ]);
                 if($res->end!=$res->start){
-                    $q=AlshatbList::where('id',$res->start+1)->first();
+                    $q=AlshatbList::where('ques_number',$res->start+1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
                     return response()->json([
                         'question' => $q,
                         'end' => 'false',
@@ -149,7 +159,7 @@ class OtherBoxController extends Controller
             }
         }else {
             if($res->end != $request->ques_id){
-                $q=AlshatbList::where('id',$request->ques_id+1)->first();
+                $q=AlshatbList::where('ques_number',$request->ques_id+1)->where('box_id',$request->box_id)->orWhere('box_id',$request->box_id-1)->orWhere('box_id',$request->box_id+1)->first();
 
                         return response()->json([
                             'end' => 'false',

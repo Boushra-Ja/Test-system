@@ -11,13 +11,13 @@ return new class extends Migration
     {
         Schema::create('test_results', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('basal') ;
+            $table->Double('basal') ;
             $table->integer('additional') ;
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->integer('dim_id')->unsigned();
             $table->foreign('dim_id')->references('id')->on('portage_diminssions')->constrained()->onDelete('cascade');
-            
+
             $table->timestamps();
         });
     }

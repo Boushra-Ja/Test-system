@@ -21,7 +21,7 @@ class OtherBoxController extends Controller
     {
         $res=TestResult::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
         if($res){
-            $age=$res->basal*12+$res->additional;
+            $age=($res->basal*12)+$res->additional;
             if($age<72){
 
                 $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $age)->where('end_age', '>', $age)->first();

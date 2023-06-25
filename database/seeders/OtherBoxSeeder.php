@@ -300,7 +300,7 @@ class OtherBoxSeeder extends Seeder
         /// 43----48//
         OtherBox::create([
             'id' => 43,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
             'subTitle_id' => SubTitle::where('title', 'التغذية')->value('id'),
         ]);
@@ -338,7 +338,7 @@ class OtherBoxSeeder extends Seeder
         /// 49 ---- 54//
         OtherBox::create([
             'id' => 49,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
 
             'subTitle_id' => SubTitle::where('title','النظافة والترتيب والصحة العامة')->value('id'),
@@ -379,7 +379,7 @@ class OtherBoxSeeder extends Seeder
         /// 55 --- 60///
         OtherBox::create([
             'id' => 55,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
             'subTitle_id' => SubTitle::where('title', 'ارتداء الملابس')->value('id'),
         ]);
@@ -417,7 +417,7 @@ class OtherBoxSeeder extends Seeder
         /// 61---66////
         OtherBox::create([
             'id' => 61,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
             'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الكبيرة والتوازن')->value('id'),
         ]);
@@ -455,7 +455,7 @@ class OtherBoxSeeder extends Seeder
         /// 67-------72
         OtherBox::create([
             'id' => 67,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
             'subTitle_id' => SubTitle::where('title', 'المهارات الحركية الدقيقة')->value('id'),
         ]);
@@ -494,7 +494,7 @@ class OtherBoxSeeder extends Seeder
         /// 73 ----78///
         OtherBox::create([
             'id' => 73,
-            'start_age' => 1,
+            'start_age' => 0,
             'end_age' =>  12,
             'subTitle_id' => SubTitle::where('title', 'مهارات ماقبل الكتابة والكتابة المبكرة')->value('id'),
         ]);

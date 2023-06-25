@@ -41,16 +41,25 @@ class CodeController extends Controller
       function login(Request $request){
 
         $user=  User::where('email',$request->email)->first();
-          if($user)
-          if($request->password == $user->password)
-              return response()->json([
-                   'message'=>'successfully',
-                   'user' => $user,
-              ]);
+          if($user){
+            $token = $user->createToken('TestToken')->plainTextToken;
+            if($request->password == $user->password)
+                return response()->json([
+                    'message'=>'successfully',
+                    'user' => $user,
+                    'token' => $token,
+
+                ]);
+            else
+            return response()->json([
+                'message'=>'this password is not true',
+            ]);
+            }
 
        else {
-            return $this->sendErrors('this account is not true', ['error' => 'not true']);
-  }
+        return response()->json([
+            'message'=>'this acount is not true',
+        ]);  }
 
 
       }

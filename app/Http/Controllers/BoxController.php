@@ -51,8 +51,9 @@ class BoxController extends Controller
         $Q_id = 0;
 
         foreach ($request->ans as $item) {
-            if ($item['ques_id'] == 1) {
-                $Q_id = $item['ques_id'];
+            $qq=PortageQuestion::where('id',$item['ques_id'])->value('ques_number');
+            if ($qq == 1) {
+                $Q_id = 1;
             }
             $ans = PortageAnswer::create([
                 'ques_id' => $item['ques_id'],

@@ -22,39 +22,47 @@ class OtherBoxController extends Controller
         $res=TestResult::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
         if($res){
             $age=$res->basal*12+$res->additional;
-            $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $age)->where('end_age', '>=', $age)->first();
-            $q=AlshatbList::where('box_id',$box->id)->first();
+            if($age<72){
 
-            $real_age=Child::where('id',$request->child_id)->first();
+                $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $age)->where('end_age', '>', $age)->first();
+                $q=AlshatbList::where('box_id',$box->id)->first();
 
-            $box_end=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $real_age->age)->where('end_age', '>=', $real_age->age)->first();
-            $q_end=AlshatbList::where('box_id',$box_end->id)->max('id');
+                $real_age=Child::where('id',$request->child_id)->first();
+
+                $box_end=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $real_age->age)->where('end_age', '>', $real_age->age)->first();
+                $q_end=AlshatbList::where('box_id',$box_end->id)->max('id');
 
 
 
 
-         $ans = HelpPortegeList::create([
-            'start' => $q->id,
-            // 'start' => $q->ques_number,
-            'true' => '0',
-            'true_q_id' => '1',
-            'end' =>$q_end,
-            //  'end' =>AlshatbList::where('id',$q_end)->value('ques_number'),
-            'child_id' => $request->child_id,
-            // 'start_box'=>$q->box_id,
+                $ans = HelpPortegeList::create([
+                    'start' => $q->id,
+                    // 'start' => $q->ques_number,
+                    'true' => '0',
+                    'true_q_id' => '1',
+                    'end' =>$q_end,
+                    //  'end' =>AlshatbList::where('id',$q_end)->value('ques_number'),
+                    'child_id' => $request->child_id,
+                    // 'start_box'=>$q->box_id,
 
-        ]);
+                ]);
 
-        $res1 = ResultList::create([
-            'sub_id' => $request->subTitle_id,
-            'child_id'=>$request->child_id
-        ]);
+                $res1 = ResultList::create([
+                    'sub_id' => $request->subTitle_id,
+                    'child_id'=>$request->child_id
+                ]);
 
-        return response()->json([
-            'question' => $q,
-            'result'=>'true'
-        ]);
+                return response()->json([
+                    'question' => $q,
+                    'result'=>'true'
+                ]);
+            }
 
+            else
+            return response()->json([
+                'result'=>'false'
+
+            ]);
         }
         else
             return response()->json([
@@ -162,7 +170,7 @@ class OtherBoxController extends Controller
             }
         }else {
             if($res->end != $request->ques_id){
-                
+
                    $q=AlshatbList::where('id',$request->ques_id+1)->first();
 
 

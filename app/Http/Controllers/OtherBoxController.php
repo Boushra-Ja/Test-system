@@ -60,7 +60,7 @@ class OtherBoxController extends Controller
 
             else
             return response()->json([
-                'result'=>'false'
+                'result'=>'age_false'
 
             ]);
         }

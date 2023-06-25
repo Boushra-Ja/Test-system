@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Note;
 use App\Models\TestResult;
 use App\Http\Requests\StoreTestResultRequest;
 use App\Http\Requests\UpdateTestResultRequest;
 use App\Http\Resources\Boshra\ReportResource;
+use Illuminate\View\View;
 
 class TestResultController extends Controller
 {
@@ -69,5 +71,13 @@ class TestResultController extends Controller
         $tests  = TestResult::where('child_id' , $child_id)->take(1)->get() ;
         return response()->json( ReportResource::collection($tests ), 200);
 
+    }
+    public function doo($child_id)
+    {
+
+        $test  = TestResult::where('child_id' , $child_id)->take(1)->get() ;
+        return response()->json([
+           "data"=> Note::collection($test )]);
+      // return View("welcome",compact($data));
     }
 }

@@ -37,11 +37,6 @@ class Note extends JsonResource
 
     public  function  calculate_age($Age1,$ss){
 
-
-
-
-
-
         $quotient = floor($Age1/12); // حساب القسم الصحيح
         $remainder = $Age1 % 12; // حساب القسم العشري وتقريبه
         if($remainder==0)
@@ -77,14 +72,6 @@ class Note extends JsonResource
 
         $care_ratio_1=" يحدد مستوى أداء الطفل على مهارات العنايه الذاتيه مثل تحمل الطفل للمسوؤليه واعتمادهعلى نفسه فس المأكل والملبس وقضاء حاجته الخاصه. ";
         $care_ratio_2=" في بعد العنايه الذاتيه مقارنه بأداء الأطفال الذين هم في نفس العمر الزمني ";
-
-
-
-
-
-
-
-
 
         $age = Child::where('id', $this->child_id)->value('age');
 

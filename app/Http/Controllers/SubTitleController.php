@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PortageDiminssion;
 use App\Models\SubTitle;
-use App\Http\Requests\StoreSubTitleRequest;
-use App\Http\Requests\UpdateSubTitleRequest;
-use Illuminate\Http\Request;
+use App\Models\TestResult;
+use Carbon\Carbon;
+
 
 class SubTitleController extends Controller
 {
@@ -20,51 +21,33 @@ class SubTitleController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    public function available( $child_id ){
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreSubTitleRequest $request)
-    {
-        //
-    }
+        $yearAgo = Carbon::now()->subYear(); // تاريخ قبل سنة من الوقت
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(SubTitle $subTitle)
-    {
-        //
-    }
+        $res=TestResult::where('child_id',$child_id)->whereDate('created_at', '>=', $yearAgo)->get('dim_id');
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(SubTitle $subTitle)
-    {
-        //
-    }
+        $a=array();
+        $i = 0;
+        foreach ($res as $item) {
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateSubTitleRequest $request, SubTitle $subTitle)
-    {
-        //
-    }
+            $a[$i]=PortageDiminssion::where('id',$item->dim_id)->value('title');
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(SubTitle $subTitle)
-    {
-        //
-    }
+            $i+=1;
+        }
+
+        return response()->json([
+            'dim' => $a,
+
+        ]);
+
+        }
+
+
+
+
+
+
+
+
 }

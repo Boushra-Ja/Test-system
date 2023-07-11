@@ -37,13 +37,10 @@ class OtherBoxController extends Controller
 
                 $ans = HelpPortegeList::create([
                     'start' => $q->id,
-                    // 'start' => $q->ques_number,
                     'true' => '0',
                     'true_q_id' => '1',
                     'end' =>$q_end,
-                    //  'end' =>AlshatbList::where('id',$q_end)->value('ques_number'),
                     'child_id' => $request->child_id,
-                    // 'start_box'=>$q->box_id,
 
                 ]);
 
@@ -58,11 +55,30 @@ class OtherBoxController extends Controller
                 ]);
             }
 
-            else
-            return response()->json([
-                'result'=>'age_false'
+            else{
+                $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', '70')->where('end_age', '>', '70')->first();
 
-            ]);
+                $q=AlshatbList::where('box_id',$box->id)->first();
+
+                $ans = HelpPortegeList::create([
+                    'start' => $q->id,
+                    'true' => '0',
+                    'true_q_id' => '1',
+                    'end' =>$box->id,
+                    'child_id' => $request->child_id,
+
+                ]);
+
+                $res1 = ResultList::create([
+                    'sub_id' => $request->subTitle_id,
+                    'child_id'=>$request->child_id
+                ]);
+
+                return response()->json([
+                    'question' => $q,
+                    'result'=>'true'
+                ]);
+            }
         }
         else
             return response()->json([
@@ -81,7 +97,6 @@ class OtherBoxController extends Controller
             $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->latest('created_at')->first();
             $ans = AlshatbListAnswer::create([
                 'ques_id' => $request->ques_id,
-                // 'ques_id' => AlshatbList::where('ques_number',$request->ques_id)->where('box_id',$request->box_id)->value('id'),
                 'result_id'=>$result->id
             ]);
 

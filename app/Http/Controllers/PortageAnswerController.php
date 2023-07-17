@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Bayan\Alshateb_all;
+use App\Http\Resources\Bayan\portage_result;
 use App\Models\TestResult;
-use App\Http\Requests\StorePortageAnswerRequest;
-use App\Http\Requests\UpdatePortageAnswerRequest;
 use App\Models\Child;
 use App\Models\PortageDiminssion;
+use App\Models\ResultList;
 use Illuminate\Http\Request;
 
 class PortageAnswerController extends Controller
@@ -22,7 +23,6 @@ class PortageAnswerController extends Controller
 
             $age=Child::where('id',$request->child_id)->value('age');
             $data=((($res->basal*12)+$res->additional)/$age)*100;
-
             if($data <= 25)
               $state="شديد جداً";
             else if($data > 25 && $data<= 40)
@@ -55,6 +55,40 @@ class PortageAnswerController extends Controller
 
 
     }
+
+
+    public function Portage_result_all()
+    {
+
+        $res=TestResult::all();
+        if($res){
+
+            $q=portage_result::collection($res );
+            return response()->json([
+                'result' => $q,
+            ]);
+
+
+        }
+
+    }
+
+
+    public function list_result_all()
+    {
+
+        $res=ResultList::all();
+        if($res){
+
+            $q=Alshateb_all::collection($res );
+            return response()->json([
+                'result' => $q,
+            ]);
+
+        }
+
+    }
+
 
 
 }

@@ -16,8 +16,10 @@ class portage_result extends JsonResource
         return [
 
             'child_nam' => Child::where('id',$this->child_id)->value('name'),
+            'child_id' => $this->child_id,
             'date' => $this->created_at,
             'dim' => PortageDiminssion::where('id',$this->dim_id)->value('title'),
+            'dim_id' => $this->dim_id,
             'basal_age' => $this->basal,
             'additional_age' => $this['additional']
 

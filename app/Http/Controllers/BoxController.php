@@ -14,6 +14,13 @@ class BoxController extends Controller
 {
     public function index(Request $request)
     {
+
+        $date=Child::where('id', $request->child_id)->first();
+        $age_update=ChildController::age($date->date);
+        $date->update(
+            [
+                'age' => $age_update,
+            ]);
         $age = Child::where('id', $request->child_id)->first();
         $box1 = Box::where('dim_id', $request->dim_id)->where('start_age', '<=', $age->age)->where('end_age', '>=', $age->age)->first();
         if ($request->disability == 'true') {

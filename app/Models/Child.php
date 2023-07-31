@@ -12,5 +12,6 @@ class Child extends Model
         'age',
         'name',
         'user_id',
+        'date'
     ];
 }

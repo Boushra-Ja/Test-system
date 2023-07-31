@@ -46,6 +46,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('store_list', [App\Http\Controllers\OtherBoxController::class,'stor']);
     Route::post('plan', [App\Http\Controllers\OtherBoxController::class,'plan']);
     Route::get('list_result_all', [App\Http\Controllers\PortageAnswerController::class,'list_result_all']);
+    Route::post('plan_list_all', [App\Http\Controllers\OtherBoxController::class,'plan_list_all']);
+
 
 
     Route::post('portage_table', [App\Http\Controllers\PortageAnswerController::class,'Portage_table']);

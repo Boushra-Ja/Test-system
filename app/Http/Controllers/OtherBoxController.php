@@ -21,6 +21,12 @@ class OtherBoxController extends Controller
     {
         $res=TestResult::where('child_id',$request->child_id)->where('dim_id',$request->dim_id)->latest('created_at')->first();
         if($res){
+            $date=Child::where('id', $request->child_id)->first();
+            $age_update=ChildController::age($date->date);
+            $date->update(
+                [
+                    'age' => $age_update,
+                ]);
             $age=($res->basal*12)+$res->additional;
             if($age<72){
 
@@ -217,6 +223,20 @@ class OtherBoxController extends Controller
         return response()->json([
             'result' => $q,
         ]);
+    }
+
+
+    public function plan_list_all(Request $request){
+
+        $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->where('created_at','>=','$request->date')->min('id');
+        if($result){
+            $res=AlshatbListAnswer::where('result_id',$result)->get();
+            $q=Alshatb_result::collection($res );
+            return response()->json([
+                'result' => $q,
+            ]);
+        }
+
     }
 
 

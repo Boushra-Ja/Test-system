@@ -43,12 +43,13 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('store_list', [App\Http\Controllers\OtherBoxController::class,'stor']);
     Route::post('plan', [App\Http\Controllers\OtherBoxController::class,'plan']);
 
-    Route::post('portage_table', [App\Http\Controllers\PortageAnswerController::class,'Portage_table']);
 
 
 
 
 
 });
+Route::post('portage_table', [App\Http\Controllers\PortageAnswerController::class,'Portage_table']);
+
 Route::get('report/{id}' , [TestResultController::class , 'report']) ;
 

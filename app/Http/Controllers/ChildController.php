@@ -47,6 +47,7 @@ class ChildController extends Controller
             'name' => $request->name ,
             'age'=>$age,
             'user_id'=>$request->user_id,
+            'date'=>$request->age
         ]);
         if($child)
                 return response()->json([
@@ -59,12 +60,12 @@ class ChildController extends Controller
         }
     }
 
-    public function age(Request $request){
-        $dateOfBirth=$request->age;
+    public Static function age($a){
+        $dateOfBirth=$a;
         $d_now = (Carbon::now())->format('d');
         $m_now = (Carbon::now())->format('m') ;
         $y_now = (Carbon::now())->format('y') ;
-
+        
         $d_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('d');
         $m_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('m');
         $y_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('y');
@@ -90,6 +91,8 @@ class ChildController extends Controller
         }
 
         $age = ($y_diff * 12) + $m_diff ;
+
+        return $age;
     }
 
     public function show(){

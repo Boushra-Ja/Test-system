@@ -37,11 +37,18 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('first_box', [App\Http\Controllers\BoxController::class,'index']);
     Route::post('continue_box', [App\Http\Controllers\BoxController::class,'store_index']);
     Route::get('show_dimantion', [App\Http\Controllers\PortageDiminssionController::class,'index']);
+    Route::get('Portage_result_all', [App\Http\Controllers\PortageAnswerController::class,'Portage_result_all']);
 
+
+    Route::get('available_dim/{child_id}', [App\Http\Controllers\SubTitleController::class,'available']);
     Route::get('sub_title', [App\Http\Controllers\SubTitleController::class,'index']);
     Route::post('first_box_list', [App\Http\Controllers\OtherBoxController::class,'first_box_list']);
     Route::post('store_list', [App\Http\Controllers\OtherBoxController::class,'stor']);
     Route::post('plan', [App\Http\Controllers\OtherBoxController::class,'plan']);
+    Route::get('list_result_all', [App\Http\Controllers\PortageAnswerController::class,'list_result_all']);
+    Route::post('plan_list_all', [App\Http\Controllers\OtherBoxController::class,'plan_list_all']);
+
+
 
 
 

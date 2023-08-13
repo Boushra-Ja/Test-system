@@ -59,4 +59,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 Route::post('portage_table', [App\Http\Controllers\PortageAnswerController::class,'Portage_table']);
 
 Route::get('report/{id}' , [TestResultController::class , 'report']) ;
+Route::get('test', [App\Http\Controllers\ResultListController::class,'store_res']);
 

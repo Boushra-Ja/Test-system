@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\API\BaseController;
 use App\Models\Child;
 use App\Http\Requests\StoreChildRequest;
 use App\Http\Requests\UpdateChildRequest;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class ChildController extends Controller
+class ChildController extends BaseController
 {
     public function stor(Request $request){
 
@@ -65,7 +67,7 @@ class ChildController extends Controller
         $d_now = (Carbon::now())->format('d');
         $m_now = (Carbon::now())->format('m') ;
         $y_now = (Carbon::now())->format('y') ;
-        
+
         $d_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('d');
         $m_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('m');
         $y_child = Carbon::createFromFormat('d/m/Y', $dateOfBirth)->format('y');
@@ -101,6 +103,34 @@ class ChildController extends Controller
         return response()->json([
             'child' => $child,
         ]);
+
+    }
+
+    public function test_child(Request $request)  {
+
+        $user = User::where('name' , $request->user_name)
+        ->where('email' , $request->email)->first() ;
+
+        if(!$user)
+        {
+            return false;
+        }
+        else{
+            return true ;
+        }
+
+        $child = Child::where('name' , $request->child_name)
+        ->where('father_name' , $request->father_name)->first() ;
+
+        if(!$child)
+        {
+            return false;
+        }
+        else{
+            return true ;
+        }
+
+
 
     }
 }

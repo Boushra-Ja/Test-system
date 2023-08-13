@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChildController;
 use App\Http\Controllers\TestResultController;
 use App\Mail\NotifyMail;
 use Illuminate\Http\Request;
@@ -59,5 +60,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 Route::post('portage_table', [App\Http\Controllers\PortageAnswerController::class,'Portage_table']);
 
 Route::get('report/{id}' , [TestResultController::class , 'report']) ;
-Route::get('test', [App\Http\Controllers\ResultListController::class,'store_res']);
+Route::post('connect/between/sys1', [ChildController::class,'connect_between_sys1']);
+Route::get('connect/between/sys2/{id}', [ChildController::class,'connect_between_sys2']);
 

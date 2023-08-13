@@ -28,6 +28,14 @@ class OtherBoxController extends Controller
                     'age' => $age_update,
                 ]);
             $age=($res->basal*12)+$res->additional;
+
+            if($age> $age_update){
+                return response()->json([
+                    'result'=>'false'
+    
+                ]);
+    
+            }
             if($age<72){
 
                 $box=OtherBox::where('subTitle_id',$request->subTitle_id)->where('start_age', '<=', $age)->where('end_age', '>', $age)->first();

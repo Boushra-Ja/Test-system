@@ -52,7 +52,8 @@ class ChildController extends BaseController
             'name' => $request->name ,
             'age'=>$age,
             'user_id'=>$request->user_id,
-            'date'=>$request->age
+            'date'=>$request->age,
+            'father_name' => $request->father_name
         ]);
         if($child)
                 return response()->json([

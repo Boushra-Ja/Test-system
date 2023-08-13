@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChildController;
+use App\Http\Controllers\ResultListController;
 use App\Http\Controllers\TestResultController;
 use App\Mail\NotifyMail;
 use Illuminate\Http\Request;

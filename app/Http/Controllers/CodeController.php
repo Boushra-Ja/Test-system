@@ -85,7 +85,7 @@ class CodeController extends Controller
         $user=  User::create([
             'name' => $request->name ,
             'email'=>$request->email,
-            'password'=>$request->password,
+            'password'=>'password',
         ]);
 
         $token = $user->createToken('TestToken')->plainTextToken;
@@ -101,6 +101,24 @@ class CodeController extends Controller
             'message'=>'failed in Store user'
        ]);
     }
+
+
+      }
+
+      function login_with_id(Request $request){
+
+        $user=  User::where('id',$request->id)->first();
+          if($user){
+            $token = $user->createToken('TestToken')->plainTextToken;
+            return response()->json([
+                'token' => $token,
+            ]);
+
+            }
+       else {
+        return response()->json([
+            'message'=>'this acount is not true',
+        ]);  }
 
 
       }

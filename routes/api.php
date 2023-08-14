@@ -32,6 +32,8 @@ Route::get('make_code', [App\Http\Controllers\SendEmail2Controller::class, 'make
 Route::post('verification', [App\Http\Controllers\CodeController::class, 'verification']);
 Route::post('login', [App\Http\Controllers\CodeController::class, 'login']);
 Route::post('login_data', [App\Http\Controllers\CodeController::class, 'login_data']);
+Route::post('login_with_id', [App\Http\Controllers\CodeController::class, 'login_with_id']);
+
 
 
 Route::group(['middleware' => ['auth:sanctum']], function () {

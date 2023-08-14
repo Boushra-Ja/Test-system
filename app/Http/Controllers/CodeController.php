@@ -87,10 +87,10 @@ class CodeController extends Controller
         if ($user) {
 
             $child_db = Child::create([
-                'name' => $request->name,
+                'name' => $request->child_name,
                 'father_name' => $request->father_name,
                 'user_id' => $user['id'],
-                'age' => $request->age,
+                'age' => ChildController::age($request->age),
                 'date' => $$request->date
             ]);
 

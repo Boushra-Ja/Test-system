@@ -31,6 +31,8 @@ Route::post('send', [App\Http\Controllers\SendEmail2Controller::class, 'basic_em
 Route::get('make_code', [App\Http\Controllers\SendEmail2Controller::class, 'make_code']);
 Route::post('verification', [App\Http\Controllers\CodeController::class, 'verification']);
 Route::post('login', [App\Http\Controllers\CodeController::class, 'login']);
+Route::post('login_data', [App\Http\Controllers\CodeController::class, 'login_data']);
+
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('stor_child', [App\Http\Controllers\ChildController::class,'stor']);

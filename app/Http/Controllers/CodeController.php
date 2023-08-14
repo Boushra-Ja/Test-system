@@ -71,5 +71,41 @@ class CodeController extends Controller
 
       }
 
+      function login_data(Request $request){
+
+
+
+        $mail_exisit=User::where('email',$request->mail)->first();
+        if($mail_exisit){
+            return response()->json([
+                'message'=>'the email already exists'
+           ]);
+        }
+
+        $user=  User::create([
+            'name' => $request->name ,
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
+        $token = $user->createToken('TestToken')->plainTextToken;
+        if($user)
+            return response()->json([
+                 'message'=>'Store user successfully',
+                 'user' => $user,
+                 'token' => $token,
+            ]);
+
+     else {
+          return response()->json([
+            'message'=>'failed in Store user'
+       ]);
+    }
+
+
+      }
+
+
+
 
 }

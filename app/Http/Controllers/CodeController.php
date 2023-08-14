@@ -90,8 +90,8 @@ class CodeController extends Controller
                 'name' => $request->child_name,
                 'father_name' => $request->father_name,
                 'user_id' => $user['id'],
-                'age' => ChildController::age($request->age),
-                'date' => $$request->date
+                'age' => ChildController::age($request->date),
+                'date' => $request->date
             ]);
 
             return response()->json([

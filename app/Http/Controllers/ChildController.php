@@ -9,8 +9,10 @@ use App\Http\Requests\UpdateChildRequest;
 use App\Models\TempTable;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
 use function PHPUnit\Framework\isEmpty;
 
 class ChildController extends BaseController
@@ -51,7 +53,7 @@ class ChildController extends BaseController
         $child=  Child::create([
             'name' => $request->name ,
             'age'=>$age,
-            'user_id'=>$request->user_id,
+            'user_id'=>Auth::user()->id,
             'date'=>$request->age,
             'father_name' => $request->father_name
         ]);
@@ -102,7 +104,7 @@ class ChildController extends BaseController
     }
 
     public function show(){
-        $child=Child::all();
+        $child=Child::where('user_id',Auth::user()->id)->get();
 
         return response()->json([
             'child' => $child,

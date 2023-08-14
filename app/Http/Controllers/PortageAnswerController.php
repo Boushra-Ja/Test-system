@@ -9,6 +9,7 @@ use App\Models\Child;
 use App\Models\PortageDiminssion;
 use App\Models\ResultList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PortageAnswerController extends Controller
 {
@@ -60,7 +61,19 @@ class PortageAnswerController extends Controller
     public function Portage_result_all()
     {
 
-        $res=TestResult::all();
+        $r=Child::where('user_id',Auth::user()->id)->get();
+
+        $res=array();
+        $i=0;
+        foreach ($r as $item){
+            $re=TestResult::where('child_id',$item->id)->get();
+            foreach ($re as $item1){
+                $res[$i]=$item1;
+                $i=$i+1;
+
+            }
+
+        }
         if($res){
 
             $q=portage_result::collection($res );
@@ -77,7 +90,24 @@ class PortageAnswerController extends Controller
     public function list_result_all()
     {
 
-        $res=ResultList::all();
+
+
+        $r=Child::where('user_id',Auth::user()->id)->get();
+
+        $res=array();
+        $i=0;
+        foreach ($r as $item){
+            $re=ResultList::where('child_id',$item->id)->get();
+            foreach ($re as $item1){
+                $res[$i]=$item1;
+                $i=$i+1;
+
+            }
+
+        }
+
+
+
         if($res){
 
             $q=Alshateb_all::collection($res );

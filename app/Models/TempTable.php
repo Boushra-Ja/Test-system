@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Child extends Model
+class TempTable extends Model
 {
     use HasFactory;
     protected $fillable = [
         'age',
         'name',
-        'user_id',
         'date',
         'father_name'
     ];

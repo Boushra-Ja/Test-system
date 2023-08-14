@@ -12,6 +12,14 @@ class SendEmail2Controller extends Controller
 {
     public function basic_email(Request $request)
     {
+
+
+        $mail_exisit=User::where('email',$request->mail)->first();
+        if($mail_exisit){
+            return response()->json([
+                'message'=>'the email already exists'
+           ]);
+        }
         Mail::to($request->mail)->send(new NotifyMail($request->name,$request->code));
 
     }
@@ -35,6 +43,6 @@ class SendEmail2Controller extends Controller
     }
 
 
-    
+
 
 }

@@ -59,6 +59,7 @@ class BoxController extends Controller
 
         foreach ($request->ans as $item) {
             $qq=PortageQuestion::where('id',$item['ques_id'])->value('ques_number');
+            // رقم السؤال 1
             if ($qq == 1) {
                 $Q_id = 1;
             }
@@ -79,12 +80,14 @@ class BoxController extends Controller
         $res = HelpPortege::where('child_id', $request->child_id)->first();
 
 
+        // العمر القاعدي سنة
         if ($Q_id == 1 && $res->true == 0) {
             $res->update(
                 [
                     'base' => 1,
                 ]);
 
+                // لم يجب اجابتين خاطئتين
             if ($res->false != 2) {
                 $box = Box::where('id', $res->start + 1)->first();
                 $q = PortageQuestion::where('box_id', $box->id)->get();

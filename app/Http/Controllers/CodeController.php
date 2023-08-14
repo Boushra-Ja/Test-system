@@ -15,6 +15,7 @@ class CodeController extends Controller
         $code=Code::where('id',$request->id)->first();
 
         if($code->code == $request->code){
+
             $user=  User::create([
                 'name' => $request->name ,
                 'email'=>$request->email,
@@ -30,12 +31,18 @@ class CodeController extends Controller
                 ]);
 
          else {
-              return $this->sendErrors('failed in Store user', ['error' => 'not true']);
+              return response()->json([
+                'message'=>'failed in Store user'
+           ]);
         }
   }
   else
-  return $this->sendErrors('verification error', ['error' => 'not true']);
+  {
+    return response()->json([
+        'message'=>'error number'
+   ]);
 
+  }
       } //
 
       function login(Request $request){

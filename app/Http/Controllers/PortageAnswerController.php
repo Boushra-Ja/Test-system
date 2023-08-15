@@ -22,8 +22,8 @@ class PortageAnswerController extends Controller
 
             $state="";
 
-            $age=Child::where('id',$request->child_id)->value('age');
-            $data=((($res->basal*12)+$res->additional)/$age)*100;
+            // $age=Child::where('id',$request->child_id)->value('age');
+            $data=((($res->basal*12)+$res->additional)/$res->age)*100;
             if($data <= 25)
               $state="شديد جداً";
             else if($data > 25 && $data<= 40)

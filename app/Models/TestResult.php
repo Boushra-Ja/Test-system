@@ -13,7 +13,8 @@ class TestResult extends Model
         'child_id',
         'basal',
         'additional',
-        'dim_id'
+        'dim_id',
+        'age'
 
     ];
 }

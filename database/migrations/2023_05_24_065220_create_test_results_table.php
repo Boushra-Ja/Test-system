@@ -13,6 +13,7 @@ return new class extends Migration
             $table->increments('id');
             $table->Double('basal') ;
             $table->integer('additional') ;
+            $table->integer('age') ;
             $table->integer('child_id')->unsigned();
             $table->foreign('child_id')->references('id')->on('children')->constrained()->onDelete('cascade');
             $table->integer('dim_id')->unsigned();

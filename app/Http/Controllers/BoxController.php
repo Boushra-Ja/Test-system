@@ -82,70 +82,41 @@ class BoxController extends Controller
 
         // العمر القاعدي سنة
         if ($Q_id == 1 && $res->true == 0) {
-            self::p1($res,$request);
+            $res->update(
+                [
+                    'base' => 1,
+                ]);
+
+                // لم يجب صندوقين خاطئين
+            if ($res->false != 2) {
+                $box = Box::where('id', $res->start + 1)->first();
+                $q = PortageQuestion::where('box_id', $box->id)->get();
+
+                return response()->json([
+                    'result' => 'not end',
+                    'question' => $q,
+                    'start_age'=>$box->start_age,
+                    'end_age'=>$box->end_age,
+                ]);
+            }
+            // اجاب على صندوقين غلط
+            else {
+                $agee = $this->result($request->child_id);
+                $res->delete();
+                $r = PortageAnswer::where('child_id', $request->child_id)->get();
+                foreach ($r as $w) {
+                    $w->delete();
+                }
+
+                return response()->json([
+                    'result' => 'end',
+                    'age' => $agee,
+                ]);
+            }
         }
 
         // عمره القاعدي ليس 1 و لم يجب على صندوقين صح
         if ($res->true != 2 && $res->base !=1) {
-            self::p2($counter,$count_true,$res,$request,$Q_id,$count_false);
-        }
-
-        // أجاب على صندوق كامل غلط
-        if ($count_false == $counter) {
-            self::p3($res,$request);
-        }
-
-        // الوضع الافتراضي اظهار الصندوق التالي
-        $box = Box::where('id', $request->box_id + 1)->first();
-        $q = PortageQuestion::where('box_id', $box->id)->get();
-
-        return response()->json([
-            'result' => 'not end',
-            'question' => $q,
-            'start_age'=>$box->start_age,
-            'end_age'=>$box->end_age,
-        ]);
-    }
-
-
-
-
-    public function p1($res,$request){
-        $res->update(
-            [
-                'base' => 1,
-            ]);
-
-            // لم يجب صندوقين خاطئين
-        if ($res->false != 2) {
-            $box = Box::where('id', $res->start + 1)->first();
-            $q = PortageQuestion::where('box_id', $box->id)->get();
-
-            return response()->json([
-                'result' => 'not end',
-                'question' => $q,
-                'start_age'=>$box->start_age,
-                'end_age'=>$box->end_age,
-            ]);
-        }
-        // اجاب على صندوقين غلط
-        else {
-            $agee = $this->result($request->child_id);
-            $res->delete();
-            $r = PortageAnswer::where('child_id', $request->child_id)->get();
-            foreach ($r as $w) {
-                $w->delete();
-            }
-
-            return response()->json([
-                'result' => 'end',
-                'age' => $agee,
-            ]);
-        }
-    }
-
-    public function p2($counter,$count_true,$res,$request,$Q_id,$count_false){
-
             //عدد الاجابات الصحيحية بعدد الأسئلة
             if ($counter == $count_true) {
                 //اجاب على الصندوق السابق بشكل صحيح
@@ -236,33 +207,40 @@ class BoxController extends Controller
                 'start_age'=>$box->start_age,
                 'end_age'=>$box->end_age,
             ]);
-
-    }
-
-    public function p3($res,$request){
-        if ($res->false == 1 && $res->false_box_id == $request->box_id - 1) {
-            $agee = $this->result($request->child_id);
-            $res->delete();
-            $r = PortageAnswer::where('child_id', $request->child_id)->get();
-            foreach ($r as $w) {
-                $w->delete();
-            }
-
-            return response()->json([
-                'result' => 'end',
-                'age' => $agee,
-            ]);
-        } else {
-            $res->update(
-                [
-                    'false' => 1,
-                    'false_box_id' => $request->box_id,
-                ]);
         }
 
+        if ($count_false == $counter) {
+            if ($res->false == 1 && $res->false_box_id == $request->box_id - 1) {
+                $agee = $this->result($request->child_id);
+                $res->delete();
+                $r = PortageAnswer::where('child_id', $request->child_id)->get();
+                foreach ($r as $w) {
+                    $w->delete();
+                }
+
+                return response()->json([
+                    'result' => 'end',
+                    'age' => $agee,
+                ]);
+            } else {
+                $res->update(
+                    [
+                        'false' => 1,
+                        'false_box_id' => $request->box_id,
+                    ]);
+            }
+        }
+
+        $box = Box::where('id', $request->box_id + 1)->first();
+        $q = PortageQuestion::where('box_id', $box->id)->get();
+
+        return response()->json([
+            'result' => 'not end',
+            'question' => $q,
+            'start_age'=>$box->start_age,
+            'end_age'=>$box->end_age,
+        ]);
     }
-
-
 
     public function result(int $child_id_)
     {
@@ -300,6 +278,7 @@ class BoxController extends Controller
             'basal' => $rule,
             'additional' => $additional,
             'dim_id' => $dim,
+            'age'=>Child::where('id', $child_id_)->value('age')
         ]);
 
         return $ans;

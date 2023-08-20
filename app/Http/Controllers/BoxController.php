@@ -21,6 +21,7 @@ class BoxController extends Controller
             [
                 'age' => $age_update,
             ]);
+        
         $age = Child::where('id', $request->child_id)->first();
         $box1 = Box::where('dim_id', $request->dim_id)->where('start_age', '<=', $age->age)->where('end_age', '>=', $age->age)->first();
         if ($request->disability == 'true') {

@@ -32,9 +32,9 @@ class OtherBoxController extends Controller
             if($age> $age_update){
                 return response()->json([
                     'result'=>'false'
-    
+
                 ]);
-    
+
             }
             if($age<72){
 
@@ -76,7 +76,7 @@ class OtherBoxController extends Controller
 
                 $ans = HelpPortegeList::create([
                     'start' => $q->id,
-                    'true' => '0',
+                    'true' => '100',
                     'true_q_id' => '1',
                     'end' =>$box->id,
                     'child_id' => $request->child_id,
@@ -106,6 +106,9 @@ class OtherBoxController extends Controller
     public function stor(Request $request)
     {
 
+
+        $res=HelpPortegeList::where('child_id',$request->child_id)->first();
+
         if($request->answer =='false'){
 
             $result=ResultList::where('child_id',$request->child_id)->where('sub_id',$request->subTitle_id)->latest('created_at')->first();
@@ -116,8 +119,23 @@ class OtherBoxController extends Controller
 
         }
 
+        if($res->true == '100'){
+            $q=AlshatbList::where('id',$request->ques_id+1)->first();
+            if($q->ques_number == '1' ){
+                return response()->json([
+                    'end' => 'true',
+                ]);
 
-        $res=HelpPortegeList::where('child_id',$request->child_id)->first();
+            }
+            return response()->json([
+                'question' => $q,
+                'end' => 'false',
+            ]);
+
+        }
+
+
+
 
 
         if($res->true != '4'){

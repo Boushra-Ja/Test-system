@@ -30,9 +30,26 @@ class BoxController extends Controller
         $age = Child::where('id', $request->child_id)->first();
         $box1 = Box::where('dim_id', $request->dim_id)->where('start_age', '<=', $age->age)->where('end_age', '>=', $age->age)->first();
         if ($request->disability == 'true') {
-            $box = Box::where('id', $box1->id - 3)->first();
+            if(($box1->id - 3 )<1){
+                $box = Box::where('id', '1')->first();
+            }
+            else if(($box1->id - 3 )< $box1->id){
+                $box = Box::where('dim_id', $request->dim_id)->first();
+            }
+            else {
+                $box = Box::where('id', $box1->id - 3)->first();
+            }
         } else {
-            $box = Box::where('id', $box1->id - 2)->first();
+            if(($box1->id - 2 )<1){
+                $box = Box::where('id', '1')->first();
+            }
+            else if(($box1->id - 2 )< $box1->id){
+                $box = Box::where('dim_id', $request->dim_id)->first();
+            }
+            else {
+                $box = Box::where('id', $box1->id - 2)->first();
+            }
+
         }
 
         $q = PortageQuestion::where('box_id', $box->id)->get();
